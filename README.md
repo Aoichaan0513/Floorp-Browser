@@ -13,3 +13,6 @@ FloorpLuncher.exe＝公開なし
 Duckduckgo＝Apach2.0により＝MITlicenseに変更
 
 以上
+Addon=同期機能の拡張機能
+
+メモリカスタマイザー＝そのまま
