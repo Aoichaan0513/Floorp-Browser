@@ -1,0 +1,800 @@
+{
+  "title": {
+    "message": "Floorp Sync"
+  },
+  "description": {
+    "message": "Floorpでご利用になれる同期機能です。"
+  },
+  "appUpdateAvailable_Android_Message": {
+    "message": "新しいバージョン {version} のダウンロード準備ができてます。新しい機能をご利用ください"
+  },
+  "appUpdateAvailable_Message": {
+    "message": "{version} をダウンロードします。詳細はこちら。"
+  },
+  "appUpdateAvailable_Title": {
+    "message": "新しいバージョンのダウンロード準備完了です"
+  },
+  "appUpdated_Message": {
+    "message": "新しいバージョンの同期機能にはセキュリティーの修正また、新しい機能、その他の軽微な修正が含まれます。"
+  },
+  "appUpdated_Title": {
+    "message": "新しいバージョンに移行"
+  },
+  "tooltip_NotSynced_Label": {
+    "message": "同期はまだ停止状態です"
+  },
+  "tooltip_Synced_Label": {
+    "message": "同期済み"
+  },
+  "tooltip_Syncing_Label": {
+    "message": "同期の設定中"
+  },
+  "button_Help_Label": {
+    "message": "ガイドを参照"
+  },
+  "button_Next_Label": {
+    "message": "次へ"
+  },
+  "button_Previous_Label": {
+    "message": "戻る"
+  },
+  "login_GetSyncId_Title": {
+    "message": "同期IDが必要ですか？"
+  },
+  "login_GetSyncId_Message": {
+    "message": "デスクトップブラウザのFloorpをダウンロードし、新しい同期を作成して、ここからブックマークにアクセスします。"
+  },
+  "help_Page_Welcome_Desktop_Content": {
+    "message": "<h4>Floorpの同期機能へようこそ！</h4><p>Floorpの同期機能はあなたのプライバシーを尊重しています。Googleのように情報収集は行いません（詳細は<a href='https://Uniant.net/Browser' class='new-tab'>ウェブサイト</a>をご覧ください）。</p><p>このページには同期機能のご利用方法が記載されています。以下のページングリンクまたは矢印キーを使ってページ間を移動してください。</p><p>注意：Floorpの同期機能は現在ブックマークのみを同期します。次世代のバージョンでは、追加のブラウザデータの同期が追加される予定です。予定されているものについては、開発の<a href='https://uniant.net/browser/sync' class='new-tab'>進捗/a>をチェックしてください。</p>"
+  },
+  "help_Page_Welcome_Android_Content": {
+    "message": "<h4>Welcome to xBrowserSync!</h4><p>xBrowserSync is a free and open-source alternative to browser sync services offered by Google, Mozilla, Opera and others, that respects your privacy and gives you complete anonymity (check out the <a href='https://link.xbrowsersync.org/www' class='new-tab'>website</a> for more info)..</p><p>Take a moment to read through this help guide to familiarise yourself with xBrowserSync, using the paging links below or swiping to move between pages.</p><p>Please note: xBrowserSync currently only syncs bookmarks. Syncing of additional browser data will be added in future versions, check out the development <a href='https://link.xbrowsersync.org/roadmap' class='new-tab'>roadmap</a> to see what’s planned.</p>"
+  },
+  "help_Page_BeforeYouBegin_Chrome_Content": {
+    "message": "<h5>また、他のブラウザ同期サービスやツール（<a href='https://uniant.net/chrome-sync' class='new-tab'>サードパーティーの拡張機能</a>など）をご利用されている場合、無効にしてください。Chromeにもこの拡張機能はインストールすることができます</p>"
+  },
+  "help_Page_BeforeYouBegin_Firefox_Content": {
+    "message": "<h4>開始する前に</h4><p>FloorpBrowserSyncはローカルのブラウザデータを変更するので、念のためブックマークやその他のブラウザデータをバックアップすることをお勧めします。また、他のブラウザ同期サービスやツール（<a href='https://link.xbrowsersync.org/firefox-sync' class='new-tab'>Firefox Sync</a>など）を使用している場合は、競合を避けるためにそれらを無効にしてください。</p>"
+  },
+  "help_Page_FirstSync_Desktop_Content": {
+    "message": "<h4>同期するための最初のステップ！</h4><p>Floorp がブラウザ データを同期する前に、暗号化するためのパスワードが必要です。</p><p>あなたのブラウザデータはパスワードを使用して暗号化され、設定パネルで設定されたアクティブな Floorp サービスに保存されます。</p><p>いったん同期されると、ローカル ブックマークに加えた変更は Floorp によって自動的に同期されます。</p>"
+  },
+  "help_Page_FirstSync_Android_Content": {
+    "message": "<h4>Syncing for the first time</h4><p>xBrowserSync actively syncs your browser data between your desktop browsers (syncing to mobile browsers is not supported at this time), you can use this app to access your synced data on your Android mobile device.</p><p>If you have not already created a sync ID, head over to your desktop browser and <a href='https://link.xbrowsersync.org/download' class='new-tab'>download</a> the xBrowserSync extension (available for Chrome and Firefox). Once you have created a sync you can use your new sync ID within this app to access your data.</p>"
+  },
+  "help_Page_SyncId_Content": {
+    "message": "<h4>あなたの同期データについて</h4><p>Floorpは個人情報を一切収集せず、ブラウザデータは同期前に暗号化されるため、プライバシーが確保されます。同期されたデータを識別するために、匿名のSyncIDが提供されます。このIDは、他のブラウザやデバイスでデータを同期する際に、パスワードと一緒に使用することができます。 </p><p>あなたの同期IDは、IDが利用されたFloorpのサービスでのみ機能することを覚えておいてください。異なるIDにしてSyncサービスに切り替える場合は、新しい同期を作成するか、以前そのサービスに同期したときに作成された既存の同期IDを使用する必要があります。</p>"
+  },
+  "help_Page_ExistingId_Desktop_Content": {
+    "message": "<h4>すでに利用しているIDを使用する</h4><p> ”すでに同期IDを持っていますか?” をクリックして、お使いの同期IDとパスワードを入力します。</p><p>Floorp は、ローカルに保存されたパスワードを使用して暗号化されたデータを取得して復号化し、復号化されたデータから再入力する前にローカル ブックマークを消去します。</p><p>同期されると、Floorp は 15 分ごとにバックグラウンドで同期されたデータの更新をチェックし、必要に応じてローカル ブックマークを自動的に更新します。また、同期されたデータの更新情報は、設定パネルで手動で同期することもできます。</p>"
+  },
+  "help_Page_ExistingId_Android_Content": {
+    "message": "<h4>Syncing with your existing ID</h4><p>Start by scanning the sync ID QR code in the Settings panel of the xBrowserSync desktop browser extension (click on your sync ID to reveal it). Make sure you enter the same encryption password used when creating the sync otherwise xBrowserSync will not be able to decrypt your data.</p><p>Also, if you are synced to a different xBrowserSync service make sure it is the active service configured in the Settings panel.</p>"
+  },
+  "help_Page_Service_Content": {
+    "message": "</p><p>デフォルトでは、データは<a href='https://link.xbrowsersync.org/api' class='new-tab'>Xsyncのサーバに保管され</a>に同期されますが、データを別のサーバに同期したい場合は、同期する前にアクティブなサービスを切り替えることができます。</p><p>利用可能な<a href='https://link.xbrowsersync. </p><p>利用可能な<a href='https://link.xbrowsersync.org/api-repo. org/service-list' class='new-tab'>公共の同期Syncサービス</a>のリストを確認したり、<a href='https://link.xbrowsersync.org/api-repo' class='new-tab'>独自のサービス</a>を運営したりすることができます。</p><p>Floorpの同期機能はサーバをボランティアによって運営されています。サービス管理者はあなたのデータに関して一切の責任を負いませんので、定期的なバックアップを忘れないでください。</p>"
+  },
+  "help_Page_Searching_Desktop_Content": {
+    "message": "<h4>ブックマークの検索</h4><p>同期したら、Enterキーを押すだけで最近のブックマークを表示したり、キーワードやURLを入力してブックマークを検索することができます。</p><p>検索結果とブックマークフォルダを切り替えて、すべての階層を参照することができます。</p><p>ブックマークを編集または削除するには、ブックマークの上にカーソルを置き、ブックマークのタイトルの横に表示されている編集アイコンをクリックします。</p>"
+  },
+  "help_Page_Searching_Android_Content": {
+    "message": "<h4>ブックマークを検索する</h4><p>同期されたブックマークは、xBrowserSyncを開くと時系列で表示されます。</p><p>検索ボックスにキーワードやURLを入力すると、ブックマークを検索することができます。</p><p>検索結果とブックマークフォルダを切り替えて、すべての階層を参照することができます。</p><p>ブックマークを長押しすると、直接ブックマークを共有、修正、削除することができます。</p>"
+  },
+  "help_Page_AddingBookmarks_Chrome_Content": {
+    "message": "<h4>ブックマークの追加</h4><p> 検索パネルのブックマーク アイコンをクリックして、現在のページをブックマークします。ブックマークのプロパティは自動的に入力されますが、より良い検索結果を得るために、説明といくつかのタグを追加してください。</p><p>代わりに、通常どおりブラウザの「このページをブックマーク」ボタンをクリックするだけで、xBrowserSync がブックマークのプロパティを自動的に入力します (これを動作させるには、オプションのパーミッションを付与する必要があります。設定パネルを確認してください)。</p>"
+  },
+  "help_Page_AddingBookmarks_Firefox_Content": {
+    "message": "<h4>ブックマークを追加する</h4><p> 検索パネルのブックマーク アイコンをクリックして、現在のページをブックマークします。ブックマークのプロパティは自動的に入力されますが、より良い検索結果を得るために、説明といくつかのタグを追加してください。</p><p>代わりに、通常どおりブラウザの「このページをブックマーク」ボタンをクリックするだけで、xBrowserSync がブックマークのプロパティを自動的に入力します。</p>"
+  },
+  "help_Page_AddingBookmarks_Android_Content": {
+    "message": "<h4>Adding a bookmark</h4><p>Add bookmarks easily by sharing to xBrowserSync from any apps that share URLs such as browsers, YouTube, Spotify and many more.</p><p>The bookmark’s properties will be fetched for you, otherwise add a description and some tags to ensure better search results.</p>"
+  },
+  "help_Page_NativeFeatures_Chrome_Content": {
+    "message": "<h4>サポートされるFloorpの機能</h4> <p>ブックマークバーやブックマークマネージャーなど、Floorpの機能を引き続き使用してください。行った変更はすべてバックグラウンドで自動的に同期されます。</p> <p> 既存のブックマークをフォルダに整理しているので心配いりません。Floorpはあなたのブックマークバーを同期します。</p> "
+    },
+  "help_Page_NativeFeatures_Firefox_Content": {
+    "message": "<h4>Native features supported</h4><p>Feel free to continue using your browser’s native bookmarking features such as the bookmarks toolbar and bookmarks library, any changes you make will be synced automatically in the background.</p><p>If you have organised your existing bookmarks into folders don’t worry, xBrowserSync will respect and maintain your existing bookmarks hierarchy.</p><p>Please note however, as Firefox’s bookmarks API does not yet support accessing native bookmark tags, any existing tags will be lost when syncing and tags added via xBrowserSync will not be saved as native tags.</p>"
+  },
+  "help_Page_BackingUp_Desktop_Content": {
+    "message": "<h4>この機能はベータ版です。バックアップは定期的に。</h4><p>Floorp Syncを使用する場合、データはあなたの責任ですので、賢く、必ずバックアップを取ってください。</p><p>設定パネルに移動して、バックアップしてください。 暗号化されていないデータをローカルファイルに保存します。必要に応じてデータを復元できます。</p><p>ローカルブラウザのデータが破損し、バックアップがない場合は、いつでもデータを元に戻すことができます。 Flooorpがインストールされたときの元の状態に戻ります。</p> "
+    },
+  "help_Page_BackingUp_Android_Content": {
+    "message": "<h4>Remember to back up</h4><p>When you use xBrowserSync your data is your responsibility so be smart and make sure to take backups.</p><p>Head over to the Settings panel and back up your unencrypted data to a local file which can be used to restore your data should you need to.</p>"
+  },
+  "help_Page_Shortcuts_Chrome_Content": {
+    "message": "<h4>ショートカットキーを利用できます</h4><p>ブックマークをすばやく検索するには、デフォルトのキーボードショートカット（Ctrl + Space）を使用してFloorp Syncをアクティブにし、Enterキーを押して最近のブックマークを表示するか、入力を開始して検索します。 </p> <p>ショートカットを変更するには Chrome://extensions/Shortcutsにアクセスし、Floorpで使用可能なショートカットを更新します。"
+    },
+  "help_Page_Shortcuts_Firefox_Content": {
+    "message": "<h4>Use shortcuts!</h4><p>To search your bookmarks quickly, use the default keyboard shortcut (Ctrl+Space) to activate the extension, then simply press Enter to view your recent bookmarks or start typing to search.</p><p>To change the shortcut, browse to about:addons, click on “Manage Extension Shortcuts” in the Settings menu and update the available shortcuts under xBrowserSync."
+  },
+  "help_Page_Mobile_Content": {
+    "message": "<h4>Go mobile</h4><p>Floorpの同期機能は、xsyncが提供するAndroidアプリを<a href='https://link.xbrowsersync.org/download-android' class='new-tab'>Google Play</a>ストア、<a href='https://link.xbrowsersync.org/fdroid' class='new-tab'>F-Droid</a>または<a href='https://link.xbrowsersync.org/app-releases-latest' class='new-tab'>直接ダウンロード</a>で入手できます。</p>"
+  },
+  "help_Page_FurtherSupport_Content": {
+    "message": "<h4>さらなるサポート</h4><p>質問はへは、Twitterの<a href='https://Twitter.com/UniantJapan' class='new-tab'>DMに質問してください。 </a>現在の<a href='https://link.xbrowsersync.org/known-issues' class='new-tab'>既知の問題</a>もチェックして、問題がそこにリストされているかどうかを確認します 。</p><p>または、<a href='https://link.xbrowsersync.org/app-issues' class='new-tab'>問題追跡システム</a>を使用して問題を報告するか、 新しい機能をリクエストしてください。</p> "
+    },
+  "button_Settings_Label": {
+    "message": "設定"
+  },
+  "button_AddBookmark_Label": {
+    "message": "ブックマークを追加"
+  },
+  "button_DeleteBookmark_Label": {
+    "message": "ブックマークを削除"
+  },
+  "button_EditBookmark_Label": {
+    "message": "ブックマークを編集"
+  },
+  "button_ShareBookmark_Label": {
+    "message": "ブックマークを共有"
+  },
+  "login_SelectedService_Label": {
+    "message": "同期サーバのURL"
+  },
+  "login_PasswordConfirmationField_Label": {
+    "message": "パスワードを認証する"
+  },
+  "login_PasswordField_Label": {
+    "message": "暗号化パスワード"
+  },
+  "login_PasswordField_New_Description": {
+    "message": "暗号化用のパスワードを入力"
+  },
+  "login_PasswordField_Existing_Description": {
+    "message": "パスワード"
+  },
+  "login_IdField_Label": {
+    "message": "ID"
+  },
+  "login_IdField_Description": {
+    "message": "ID"
+  },
+  "login_IdField_InvalidSyncId_Label": {
+    "message": "うーん、、これは有効な同期IDでは無いようです。"
+  },
+  "button_UpdateService_Label": {
+    "message": "サーバを変更"
+  },
+  "button_ScanCode_Label": {
+    "message": "IDをスキャン"
+  },
+  "button_ToggleLight_Label": {
+    "message": "ライトを止める"
+  },
+  "button_DisableSync_Label": {
+    "message": "同期を停止"
+  },
+  "button_EnableSync_Label": {
+    "message": "同期"
+  },
+  "button_ExistingSync_Label": {
+    "message": "すでに同期IDを持っていますか？"
+  },
+  "button_NewSync_Label": {
+    "message": "同期IDを持っていない場合"
+  },
+  "button_GetSyncId_Label": {
+    "message": "新しい同期IDを入手"
+  },
+  "login_ConfirmUpdateService_Title": {
+    "message": "このサービスに移行しますか？"
+  },
+  "login_ConfirmUpdateService_Warning": {
+    "message": "<strong>お知らせ</strong>Floorpの同期サービスはボランティアのサーバによって独立して運営されています。サービス管理者はお客様のデータについて一切の責任を負いませんので、定期的なバックアップを忘れないようにしてください。"
+  },
+  "login_ConfirmUpdateService_Status_Label": {
+    "message": "状態"
+  },
+  "login_ConfirmUpdateService_Location_Label": {
+    "message": "ロケーション"
+  },
+  "login_ConfirmUpdateService_MaxSyncSize_Label": {
+    "message": "最大の同期サイズ"
+  },
+  "login_ConfirmUpdateService_ApiVersion_Label": {
+    "message": "APIのバージョン"
+  },
+  "button_SyncUpdates_Label": {
+    "message": "同期を更新"
+  },
+  "login_ConfirmSync_Title": {
+    "message": "確認"
+  },
+  "login_ConfirmSync_Message": {
+    "message": "Floorpはあなたの同期データを削除しようとしています。実行してよろしいですか？"
+  },
+  "login_DisableOtherSyncs_Title": {
+    "message": "同期機能を使う前に"
+  },
+  "login_DisableOtherSyncs_Message": {
+    "message": "<a href='https://link.xbrowsersync.org/chrome-sync' class='new-tab'>他の同期機能</a>などが有効な状態でFloorp Syncでブラウザのデータを同期すると、データの重複や破損の原因となります。続行する前にそれらを無効にしてください。"
+  },
+  "login_UpgradeSync_Title": {
+    "message": "同期をアップグレードする準備は出来ていますか？"
+  },
+  "login_UpgradeSync_Message": {
+    "message": "<p>このバージョンのFloorpと同期するためには、この同期IDをアップグレードする必要があります。アップグレード後は、以前のバージョンのFloorpとは同期できなくなります。</p><p> 続行する前に、Floorpブラウザが最新であることを確認してください。続行する準備はできていますか？</p>"
+  },
+  "login_ScanId_Title": {
+    "message": "あなたのIDをスキャン"
+  },
+  "login_ScanId_Message": {
+    "message": "デスクトップ版FloorpでFloorpの同期機能を開き、[設定]パネルに移動し、同期IDをクリックして、ここでスキャンできるQRコードを表示します"
+  },
+  "support_Message": {
+    "message": "<p>私たちはxBrowserSyncをナンバーワンのブラウザ同期ツールにしたいと思っていますが、まだやるべきことがたくさんあります：</p><ul><li>ブラウザのタブと履歴の同期を追加</li><li> 主要なデスクトップブラウザをすべてサポート</li><li> 他の言語への翻訳</li><li>そして<a href='https://link. xbrowsersync.org/roadmap' class='new-tab'>much more</a>！</li></ul><p>皆さんのサポートがあってこそ、xBrowserSyncを改善し続け、ビッグテックの腐敗からプライバシーと生産性を守るための効果的なツールであり続けることができるのです！</p>"
+  },
+  "support_Title": {
+    "message": "同期サーバの提供者をサポート"
+  },
+  "permissions_Message": {
+    "message": "<p>Floorp Syncは、ブラウザの「ブックマークの追加」ボタンで追加されたブックマークに、利用可能なメタデータを自動的に付加します。この機能を有効にするには、Floorpが訪問したウェブサイトのデータを読み込めるように、<a href='https://link.xbrowsersync.org/optional-perms-faq' class='new-tab'>追加の権限</a>を必要とします。</p><p>この権限を許可するには「続ける」をクリックしてポップアップをクリックしてください。"
+  },
+  "permissions_title": {
+    "message": "Floorpの同期機能へようこそ"
+  },
+  "button_Confirm_Label": {
+    "message": "はい"
+  },
+  "button_Deny_Label": {
+    "message": "いいえ"
+  },
+  "search_Field_Description": {
+    "message": "ブックマークを検索"
+  },
+  "search_NoBookmarks_Message": {
+    "message": "ブックマークが追加されていません。追加しましょう！"
+  },
+  "search_NoResults_Message": {
+    "message": "ブックマークが見つかりません"
+  },
+  "search_FolderEmpty_Message": {
+    "message": "空のフォルダーです📁"
+  },
+  "shareBookmark_Message": {
+    "message": "ブックマークをシェア"
+  },
+  "bookmarkShared_Message": {
+    "message": "Floorpからのシェア"
+  },
+  "bookmarkCreated_Message": {
+    "message": "ブックマークが作成されました"
+  },
+  "bookmarkDeleted_Message": {
+    "message": "ブックマークが削除されました"
+  },
+  "bookmarkUpdated_Message": {
+    "message": "ブックマークは更新されました"
+  },
+  "scan_Title": {
+    "message": "同期IDのQRコードから同期"
+  },
+  "settings_Prefs_SyncToolbarConfirmation_Message": {
+    "message": "<p>この設定を有効にすると、現在ブックマークツールバーに表示されているブックマークを、同期されたブックマークに置き換えます。</p><p>実行してよろしいですか？</p>"
+  },
+  "settings_Sync_Id_Description": {
+    "message": "同期IDを使って、他のデバイスの同期データに接続します。（クリックするとQRコードが表示されます。）"
+  },
+  "settings_Sync_UpdatesAvailable_False_Message": {
+    "message": "同期は更新されました"
+  },
+  "settings_Sync_UpdatesAvailable_True_Message": {
+    "message": "アップデートが利用可能で可能で、次回の同期は"
+  },
+  "settings_BackupRestore_Backup_Label": {
+    "message": "バックアップ"
+  },
+  "settings_BackupRestore_BackupLocal_Description": {
+    "message": "ファイルにブラウザのデータをバックアップできます"
+  },
+  "settings_BackupRestore_BackupSynced_Description": {
+    "message": "バックアップファイルににデータを同期"
+  },
+  "settings_BackupRestore_Restore_Label": {
+    "message": "戻す"
+  },
+  "settings_BackupRestore_RestoreLocal_Description": {
+    "message": "ローカルのブラウザーデータをバックアップから復元します"
+  },
+  "settings_BackupRestore_RestoreSynced_Description": {
+    "message": "同期されたデータをバックアップから復元します。"
+  },
+  "settings_BackupRestore_Revert_Label": {
+    "message": "初期状態に戻す"
+  },
+  "settings_BackupRestore_Revert_Description": {
+    "message": "ローカルブラウザのデータをインストール時の初期状態に戻します。"
+  },
+  "settings_BackupRestore_Revert_Confirmation_Message": {
+    "message": "<p>このまま続行すると、アクティブな同期は無効になり、ローカルデータはFloorp Syncが初期状態に戻ります。</p><p>実行してよろしいですか？"
+  },
+  "settings_BackupRestore_Revert_Completed_Label": {
+    "message": "データはインストール時の初期状態に戻されました。"
+  },
+  "settings_BackupRestore_Revert_Unavailable_Label": {
+    "message": "インストール状態のデータが利用できません、戻すことができません。"
+  },
+  "settings_About_Title": {
+    "message": "Syncについて"
+  },
+  "settings_About_AppVersion_Label": {
+    "message": "バージョン"
+  },
+  "button_ReleaseNotes_Label": {
+    "message": "リリースノートを見る"
+  },
+  "button_Support_Label":{
+    "message": "同期サーバの管理者に寄付"
+  },
+  "settings_Issues_Help_Label": {
+    "message": "ヘルプ"
+  },
+  "settings_Issues_Help_Description": {
+    "message": "ご質問や問題がありますか？必ずヘルプガイドに目を通してください。そうでなければ、答えはFAQにあるかもしれません。"
+  },
+  "settings_Issues_ViewFAQs_Label": {
+    "message": "FAQを見る"
+  },
+  "button_Cryptos_Label": {
+    "message": "暗号化について"
+  },
+  "button_Liberapay_Label": {
+    "message": "Liberapay"
+  },
+  "button_Patreon_Label": {
+    "message": "Patreon"
+  },
+  "settings_Issues_Title": {
+    "message": "問題"
+  },
+  "settings_Issues_Tracker_Label": {
+    "message": "問題追跡"
+  },
+  "settings_Issues_Tracker_Description": {
+    "message": "バグを報告したり、新機能をリクエストするために課題を報告してください。"
+  },
+  "settings_Issues_RaiseIssue_Label": {
+    "message": "課題を報告"
+  },
+  "settings_Issues_Log_Label": {
+    "message": "アプリケーションログ"
+  },
+  "settings_Issues_Log_Description": {
+    "message": "課題のログを取る際に、アプリケーションログをダウンロードして含める"
+  },
+  "settings_Issues_ClearLog_Label": {
+    "message": "ログのクリア"
+  },
+  "settings_Issues_DownloadLog_Label": {
+    "message": "ログを落とす"
+  },
+  "settings_Issues_LogSize_Label": {
+    "message": "現在のログサイズ"
+  },
+  "settings_Permissions_Title": {
+    "message": "オプションのパーミッション"
+  },
+  "settings_Permissions_ReadWebsiteData_Title": {
+    "message": "ウェブサイトデータの読み込み"
+  },
+  "settings_Permissions_ReadWebsiteData_Description": {
+    "message": "ブラウザの「このページをブックマークに追加」ボタン（<a href='https://link.xbrowsersync.org/optional-perms-faq' class='new-tab'>詳細はこちら</a>）を使用する際に、ブックマークにメタデータを自動的に追加するために必要です。"
+  },
+  "settings_Permissions_ReadWebsiteData_Granted_Label": {
+    "message": "許諾済み"
+  },
+  "settings_Permissions_ReadWebsiteData_NotGranted_Label": {
+    "message": "許可されていません"
+  },
+  "button_Permissions_Remove_Label": {
+    "message": "パーミッションを削除"
+  },
+  "button_Permissions_Add_Label": {
+    "message": "権限を付与"
+  },
+  "button_SearchResults_Label": {
+    "message": "検索結果を見る"
+  },
+  "button_BookmarkTree_Label": {
+    "message": "ブックマークフォルダーを見る"
+  },
+  "settings_Service_Title": {
+    "message": "サービス"
+  },
+  "settings_Service_Status_Label": {
+    "message": "サービスの状態"
+  },
+  "settings_Service_Status_NoNewSyncs": {
+    "message": "新しい同期を受け入れない"
+  },
+  "settings_Service_Status_Error": {
+    "message": "設定に接続エラーが発生しました"
+  },
+  "settings_Service_Status_Loading": {
+    "message": "チェック中"
+  },
+  "settings_Service_Status_Online": {
+    "message": "オンライン"
+  },
+  "settings_Service_Status_Offline": {
+    "message": "オフライン"
+  },
+  "button_UpdateServiceUrl_Label": {
+    "message": "サーバを変更"
+  },
+  "settings_Service_UpdateForm_Message": {
+    "message": "代替となる同期サービスのURLを入力してください。公開されているSyncサービスの一覧を<a href='https://link.xbrowsersync.org/service-list' class='new-tab'>こちら</a>からご覧ください。"
+  },
+  "settings_Service_UpdateForm_Field_Description": {
+    "message": "同期サービスのURL"
+  },
+  "button_Update_Label": {
+    "message": "アップデート"
+  },
+  "button_Cancel_Label": {
+    "message": "キャンセル"
+  },
+  "settings_Service_UpdateForm_Confirm_Message": {
+    "message": "<p>サーバーを変更すると、現在の同期は無効になり、新しい同期を作成する必要があります。</p><p>以前にこのサーバを使って同期を作成し、データを取得したい場合は、その時に提供された同期IDを使用できます。</p><p>OK to proceed</p>?"
+  },
+  "settings_Service_UpdateForm_Required_Label": {
+    "message": "同期サービスのURLが必要です"
+  },
+  "settings_Service_UpdateForm_InvalidService_Label": {
+    "message": "有効な同期サーバURLではありません"
+  },
+  "settings_Service_UpdateForm_RequestFailed_Label": {
+    "message": "サービスへの接続ができません"
+  },
+  "settings_Service_UpdateForm_ServiceVersionNotSupported_Label": {
+    "message": "このサービスはサポートされていないAPIバージョンを実行しています"
+  },
+  "settings_BackupRestore_Title": {
+    "message": "バックアップと復元"
+  },
+  "settings_NotAvailable_Message": {
+    "message": "同期が有効なときに利用できる設定"
+  },
+  "settings_Prefs_Title":{
+    "message": "環境設定"
+  },
+  "settings_Prefs_SyncToolbar_Label": {
+    "message": "ブックマークツールバーの同期"
+  },
+  "settings_Prefs_SyncToolbar_Description": {
+    "message": "同期されたブラウザ間で異なるツールバーのブックマークを表示するには、この設定を無効にしてください。"
+  },
+  "settings_Prefs_CheckForAppUpdates_Label": {
+    "message": "アプリのアップデートをチェックする"
+  },
+  "settings_Prefs_CheckForAppUpdates_Description": {
+    "message": "Floorp Syncの新しい機能がリリースされた場合通知されます。"
+  },
+  "settings_Prefs_SearchBar_Label": {
+    "message": "代替検索ビュー"
+  },
+  "settings_Prefs_SearchBar_Description": {
+    "message": "検索結果の下に検索バーを表示"
+  },
+  "updated_Message": {
+    "message": "Floorp Syncは更新されました。セキュリティー修正などが含まれます。"
+  },
+  "updated_Title": {
+    "message": "アップデート"
+  },
+  "button_Backup_Label": {
+    "message": "バックアップ"
+  },
+  "button_Restore_Label": {
+    "message": "復元"
+  },
+  "button_Saving_Label": {
+    "message": "保存中"
+  },
+  "button_Done_Label": {
+    "message": "完了！"
+  },
+  "button_Clear_Label": {
+    "message": "消去"
+  },
+  "button_ShowPassword_Label": {
+    "message": "パスワードの公開"
+  },
+  "button_Close_Label" :{
+    "message": "閉じる"
+  },
+  "button_Continue_Label": {
+    "message": "続ける"
+  },
+  "button_Back_Label": {
+    "message": "戻る"
+  },
+  "button_OK_Label": {
+    "message": "完了！"
+  },
+  "button_Dismiss_Label": {
+    "message": "失敗した"
+  },
+  "downloadFile_Success_Message": {
+    "message": "ファイルが自動的にダウンロードされなかった場合は、下のリンクを右クリックして「名前を付けてリンク先を保存」してください..."
+  },
+  "settings_BackupRestore_RestoreSuccess_Message": {
+    "message": "あなたのデータは復元されました。"
+  },
+  "settings_BackupRestore_RestoreForm_BackupFile_Description": {
+    "message": "復元するバックアップファイルの選択"
+  },
+  "settings_BackupRestore_RestoreForm_Message": {
+    "message": "バックアップファイルの内容をコピーしてデータを復元します"
+  },
+  "settings_BackupRestore_RestoreForm_DataField_Label": {
+    "message": "バックアップデータの貼り付け"
+  },
+  "settings_BackupRestore_RestoreForm_Invalid_Label": {
+    "message": "無効なxBrowserSyncのバックアップデータ"
+  },
+  "button_SelectBackupFile_Label": {
+    "message": "ファイルの選択"
+  },
+  "button_RestoreData_Label": {
+    "message": "データの復元"
+  },
+  "button_RestoreData_Invalid_Label": {
+    "message": "無効なデータ"
+  },
+  "button_RestoreData_Ready_Label": {
+    "message": "Ready to restore"
+  },
+  "settings_Sync_Title": {
+    "message": "同期"
+  },
+  "settings_Sync_Id_Label": {
+    "message": "同期 ID"
+  },
+  "settings_Sync_DisplayQRCode_Message": {
+    "message": "QRコードの表示"
+  },
+  "settings_Service_DataUsage_Label": {
+    "message": "データ使用量"
+  },
+  "settings_Service_DataUsage_Description": {
+    "message": "残りの容量"
+  },
+  "settings_BackupRestore_ConfirmRestore_Sync_Message": {
+    "message": "<p>現在、同期が有効になっているため、復元されるデータは同期されたデータを上書きします。</p><p>データをローカルブラウザのみに復元するには、復元する前に同期を無効にしてください。</p><p>OK to proceed? </p>"
+  },
+  "settings_BackupRestore_ConfirmRestore_NoSync_Message": {
+    "message": "<p>現在、同期が無効になっているため、復元されるデータはローカルのブラウザのデータを上書きします。</p><p>続行しますか？</p>"
+  },
+  "bookmark_Title_Add": {
+    "message": "ブックマークを追加"
+  },
+  "bookmark_Title_Edit": {
+    "message": "ブックマークを編集"
+  },
+  "bookmark_TitleField_Label": {
+    "message": "タイトル"
+  },
+  "bookmark_UrlField_Label": {
+    "message": "URL"
+  },
+  "bookmark_DescriptionField_Label": {
+    "message": "説明"
+  },
+  "bookmark_TagsField_Label": {
+    "message": "タグ"
+  },
+  "bookmark_TagsField_Description": {
+    "message": "タグ 1, タグ 2, タグ 3, その他..."
+  },
+  "bookmark_BookmarkForm_Required_Label": {
+    "message": "ブックマークのURLが必要です"
+  },
+  "bookmark_BookmarkForm_Exists_Label": {
+    "message": "URLはすでにブックマークされています"
+  },
+  "button_AddTags_Label": {
+    "message": "追加"
+  },
+  "button_DeleteTag_Label": {
+    "message": "タグの削除"
+  },
+  "button_Delete_Label": {
+    "message": "削除"
+  },
+  "button_Share_Label": {
+    "message": "Share"
+  },
+  "button_UpdateBookmarkProperties_Label": {
+    "message": "ブックマークプロパティの更新"
+  },
+  "button_ClearTags_Label": {
+    "message": "タグのクリア"
+  },
+  "button_Revert_Label": {
+    "message": "戻す"
+  },
+  "button_View_Label": {
+    "message": "見る"
+  },
+  "qr_Copied_Label": {
+    "message": "コピーされました！"
+  },
+  "qr_CopySyncId_Label": {
+    "message": "同期IDをクリップボードにコピー"
+  },
+  "qr_Message": {
+    "message" :"xBrowserSyncのAndroidアプリを使ってこのQRコードをスキャンし、同期データに接続してください。"
+  },
+  "working_Restoring_Message": {
+    "message": "復元中"
+  },
+  "working_Reverting_Message": {
+    "message": "Reverting"
+  },
+  "working_Syncing_Message": {
+    "message": "同期中"
+  },
+  "workingOffline_Title": {
+    "message": "Working offline"
+  },
+  "workingOffline_Message": {
+    "message": "オフラインで作業しています。接続が回復した時点で変更があれば同期されます。"
+  },
+  "getMetadata_Message": {
+    "message": "ブックマークのプロパティを取得しています。タッチしてキャンセルしてください。"
+  },
+  "getMetadata_Success_Message": {
+    "message": "ブックマークのプロパティが更新されました。"
+  },
+  "bookmarks_Container_Menu_Title": {
+    "message": "メニューのブックマーク"
+  },
+  "bookmarks_Container_Mobile_Title": {
+    "message": "モバイルブックマーク"
+  },
+  "bookmarks_Container_Other_Title": {
+    "message": "その他のブックマーク"
+  },
+  "bookmarks_Container_Toolbar_Title": {
+    "message": "ツールバーのブックマーク"
+  },
+  "error_Default_Title": {
+    "message": "Something went wrong"
+  },
+  "error_Default_Message": {
+    "message": "問題が解決しない場合は、<a href='https://link.xbrowsersync.org/app-issues' class='new-tab'>問題を報告してください</a>。"
+  },
+  "error_HttpRequestFailed_Title": {
+    "message": "サービスへの接続が失われました"
+  },
+  "error_HttpRequestFailed_Message": {
+    "message": "ネットワーク接続を確認し、再度お試しください。"
+  },
+  "error_TooManyRequests_Title": {
+    "message": "サービスリクエスト制限ヒット"
+  },
+  "error_TooManyRequests_Message": {
+    "message": "同期が無効になっています。同期を再開するには再度同期を有効にしてください。"
+  },
+  "error_RequestEntityTooLarge_Title": {
+    "message": "同期データの制限を超えました"
+  },
+  "error_RequestEntityTooLarge_Message": {
+    "message": "いくつかのブックマークを削除して再試行するか、より大きな同期制限のあるサービスに変更してください。"
+  },
+  "error_NotAcceptingNewSyncs_Title": {
+    "message": "サービスが新しい同期を受け付けていません"
+  },
+  "error_NotAcceptingNewSyncs_Message": {
+    "message": "別のサービスに切り替えるか、後でもう一度試してください。"
+  },
+  "error_DailyNewSyncLimitReached_Title": {
+    "message": "デイリーニューシンクリミットに達しました"
+  },
+  "error_DailyNewSyncLimitReached_Message" : {
+    "message": "既存の同期IDに同期するか、別のサービスに切り替えるか、明日もう一度試してください。"
+  },
+  "error_MissingClientData_Title": {
+    "message": "Missing credentials"
+  },
+  "error_MissingClientData_Message": {
+    "message": "保存されている認証情報が見つかりません。同期を再度有効にして再試行してください。"
+  },
+  "error_InvalidCredentials_Title": {
+    "message": "無効な認証情報"
+  },
+  "error_InvalidCredentials_Message":{
+    "message": "同期ID、パスワード、サービスURLが正しく入力されているか確認してください。"
+  },
+  "error_SyncRemoved_Title": {
+    "message": "同期が見つかりません"
+  },
+  "error_SyncRemoved_Message": {
+    "message": "要求された同期が存在しません。活動していないために削除された可能性があります。"
+  },
+  "error_NoDataToRestore_Title": {
+    "message": "復元するデータがありません"
+  },
+  "error_NoDataToRestore_Message": {
+    "message": "リストアする前に、有効なxBrowserSyncのバックアップを提供していることを確認してください。"
+  },
+  "error_LocalSyncError_Title": {
+    "message": "同期エラー"
+  },
+  "error_LocalSyncError_Message":{
+    "message": "ローカルデータが更新されました。以前の同期されていない変更をやり直してください。"
+  },
+  "error_OutOfSync_Title":{
+    "message": "同期のクラッシュが検出されました"
+  },
+  "error_OutOfSync_Message": {
+    "message": "ローカルデータが同期されていませんでしたが、現在は更新されています。以前の同期されていない変更をやり直してください。"
+  },
+  "error_InvalidService_Title": {
+    "message": "無効の同期サーバURL"
+  },
+  "error_InvalidService_Message":{
+    "message": "サービスURLは有効な同期サービスではありません。"
+  },
+  "error_ServiceOffline_Title": {
+    "message": "サービスがオフラインです"
+  },
+  "error_ServiceOffline_Message":{
+    "message": "xBrowserSyncサービスは現在オフラインです、後でもう一度お試しください"
+  },
+  "error_UnsupportedServiceApiVersion_Title": {
+    "message": "サービスがサポートされていません"
+  },
+  "error_UnsupportedServiceApiVersion_Message": {
+    "message": "このサービスはサポートされていないAPIバージョンを実行しています。"
+  },
+  "error_ContainerChanged_Title": {
+    "message": "同期専用のフォルダが変更されました"
+  },
+  "error_ContainerChanged_Message": {
+    "message": "同期問題を引き起こす可能性があるため、[xbs]フォルダの変更は避けてください"
+  },
+  "error_LocalContainerNotFound_Title": {
+    "message": "予期せぬブックマーク構造"
+  },
+  "earl_LocalContainerNotFound_Message": {
+    "message": "ブラウザのプロファイルが破損している可能性があります。新しいプロファイルを作成してみると問題が解決する場合があります。"
+  },
+  "error_FailedGetPageMetadata_Title": {
+    "message": "ブックマークのプロパティを取得できませんでした"
+  },
+  "error_FailedGetPageMetadata_Message": {
+    "message": "URLが無効であるか、ウェブページのデータを取得できませんでした"
+  },
+  "error_ScanFailed_Message": {
+    "message": "スキャンに失敗しました。パーミッションが付与されているか確認し、再度お試しください。"
+  },
+  "error_ShareFailed_Title":{
+    "message": "シェアに失敗しました"
+  },
+  "error_FailedDownloadFile_Title": {
+    "message": "バックアップが失敗しました"
+  },
+  "error_FailedRestoreData_Title": {
+    "message": "データの復元に失敗しました"
+  },
+  "error_FailedRestoreData_Message": {
+    "message": "提供されたバックアップデータは、期待されるフォーマットではありません。"
+  },
+  "error_FailedShareUrl_Title": {
+    "message": "共有ブックマークURLの取得ができません"
+  },
+  "error_FailedShareUrlNotSynced_Title": {
+    "message": "ブックマークを追加するには同期されている必要があります"
+  },
+  "error_FailedRefreshBookmarks_Title": {
+    "message": "更新情報を取得できませんでした"
+  },
+  "error_UncommittedSyncs_Title": {
+    "message": "変更が同期されていません"
+  },
+  "error_UncommittedSyncs_Message": {
+    "message": "サービスへの接続が回復すると、同期がコミットされます。"
+  }
+}

@@ -1,0 +1,1469 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url("../../node_modules/typeface-roboto-condensed/files/roboto-condensed-latin-400.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url("../../node_modules/typeface-roboto-condensed/files/roboto-condensed-latin-700.woff2") format("woff2");
+  font-weight: bold; }
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url("../../node_modules/typeface-roboto-condensed/files/roboto-condensed-latin-400italic.woff2") format("woff2");
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url("../../node_modules/typeface-roboto-condensed/files/roboto-condensed-latin-700italic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url("../../node_modules/source-code-pro/WOFF2/OTF/SourceCodePro-Regular.otf.woff2") format("woff2"); }
+
+@-webkit-keyframes animation-clouds {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(-53.571rem, 32.142rem, 0); } }
+
+@-moz-keyframes animation-clouds {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(-53.571rem, 32.142rem, 0); } }
+
+@-ms-keyframes animation-clouds {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(-53.571rem, 32.142rem, 0); } }
+
+@-o-keyframes animation-clouds {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(-53.571rem, 32.142rem, 0); } }
+
+@keyframes animation-clouds {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(-53.571rem, 32.142rem, 0); } }
+
+.animate-fade-in.ng-hide-remove {
+  opacity: 0;
+  transition: opacity 0.2s ease-in; }
+  .animate-fade-in.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1; }
+
+.animate-fade-in.ng-enter {
+  opacity: 0;
+  transition: opacity 0.2s ease-in; }
+  .animate-fade-in.ng-enter.ng-enter-active {
+    opacity: 1; }
+
+.animate-fade-out.ng-hide-add {
+  transition: opacity 0.2s ease-in; }
+  .animate-fade-out.ng-hide-add.ng-hide-add-active {
+    opacity: 0; }
+
+* {
+  box-shadow: none;
+  outline: none; }
+
+:root {
+  font-size: 14px; }
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #edfeff;
+  line-height: 1.25rem; }
+  body h2 {
+    font-size: 1.5em;
+    font-weight: 800;
+    line-height: 1.2em;
+    float: left;
+    margin: 0; }
+  body h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-top: 0;
+    line-height: 1.75rem; }
+  body a {
+    color: inherit;
+    border-bottom: 1px dotted #edfeff;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer; }
+    body a:active {
+      color: #35c6e8 !important;
+      border-bottom-color: #35c6e8 !important; }
+    body a:focus, body a:hover {
+      color: #35c6e8;
+      border-bottom-color: #35c6e8;
+      text-decoration: none;
+      outline: 0; }
+  body button.btn {
+    border-width: 0; }
+    body button.btn:active, body button.btn:hover, body button.btn:focus {
+      box-shadow: none; }
+    body button.btn.btn-default {
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-transform: capitalize;
+      background-color: rgba(237, 254, 255, 0.3);
+      color: #edfeff;
+      min-width: 6rem;
+      border-color: #edfeff;
+      border-width: 0.15rem;
+      border-radius: 3rem;
+      transition: all ease-in-out 0.2s;
+      padding: 0 1.2rem;
+      line-height: 2.5rem; }
+      body button.btn.btn-default:not([disabled]):active {
+        background-color: #edfeff !important;
+        color: #35c6e8 !important;
+        border-color: #edfeff !important; }
+      body button.btn.btn-default:not([disabled]):hover {
+        background-color: #edfeff;
+        color: #35c6e8;
+        border-color: #edfeff; }
+      body button.btn.btn-default:not([disabled]):focus {
+        text-decoration: underline; }
+        body button.btn.btn-default:not([disabled]):focus:active, body button.btn.btn-default:not([disabled]):focus:hover {
+          text-decoration: none; }
+      body button.btn.btn-default[disabled] {
+        opacity: 0.5;
+        cursor: default;
+        background-color: rgba(237, 254, 255, 0.3);
+        border-color: #edfeff;
+        color: #edfeff; }
+    body button.btn.btn-fab {
+      background-color: #083039;
+      color: #edfeff;
+      font-size: 1.5rem;
+      border-radius: 100%;
+      width: 4rem;
+      height: 4rem;
+      padding: 0;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      border: none;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12) !important;
+      transition: color ease-in-out 0.2s;
+      z-index: 10; }
+      body button.btn.btn-fab:active {
+        background-color: #35c6e8 !important;
+        color: #edfeff !important; }
+      body button.btn.btn-fab.fixed {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem; }
+    body button.btn.btn-icon {
+      background: none;
+      color: #083039;
+      padding: 0;
+      border-radius: 0;
+      opacity: 0.4;
+      transition: opacity ease-in-out 0.2s; }
+      body button.btn.btn-icon:active {
+        opacity: 1 !important; }
+      body button.btn.btn-icon:hover, body button.btn.btn-icon:focus {
+        opacity: 1; }
+    body button.btn:active, body button.btn:active:focus, body button.btn:focus, body button.btn:hover {
+      outline: 0; }
+    body button.btn .spinner-border-sm {
+      border-width: 0.15rem;
+      height: 0.75rem;
+      width: 0.75rem;
+      vertical-align: baseline;
+      margin-right: 0.1rem;
+      border-color: #083039;
+      border-right-color: transparent; }
+  body p {
+    margin: 0 0 0.75rem; }
+  body .alert {
+    position: fixed;
+    z-index: 1010;
+    width: 100%;
+    max-width: 768px;
+    border: none;
+    border-radius: 0;
+    margin: 0 auto;
+    background-color: rgba(234, 56, 105, 0.9);
+    border: none;
+    color: #edfeff; }
+    @media (min-width: 321px) {
+      body .alert {
+        font-size: 0.9rem; }
+        body .alert h4 {
+          margin-bottom: 0 !important;
+          margin-top: -0.4rem; }
+        body .alert p {
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-wrap: normal;
+          white-space: nowrap;
+          max-width: 95%; } }
+    body .alert a:active, body .alert a:focus, body .alert a:hover {
+      color: #083039;
+      border-bottom-color: #083039; }
+    body .alert button.btn-close {
+      float: right;
+      color: #edfeff;
+      font-size: 1.2rem;
+      line-height: 1.7rem; }
+      @media (min-width: 321px) {
+        body .alert button.btn-close {
+          font-size: 1.5rem;
+          line-height: 2.5rem; } }
+      body .alert button.btn-close i {
+        opacity: 0.7; }
+    body .alert p {
+      margin-bottom: 0; }
+      body .alert p:hover {
+        color: #edfeff; }
+    body .alert h4 {
+      margin-bottom: 0.5rem; }
+  body .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: #01ab8a;
+    background: linear-gradient(20deg, #01ab8a 0, #35c6e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#01ab8a', endColorStr='#35c6e8'); }
+    body .background .background-img {
+      display: block;
+      position: absolute;
+      z-index: 0;
+      width: 535.71rem;
+      height: 321.42rem;
+      top: -32.142rem;
+      background: url("../img/clouds.svg");
+      background-size: 53.571rem;
+      background-repeat: repeat;
+      opacity: 0.2;
+      -webkit-animation: animation-clouds 100s linear infinite;
+      -khtml-animation: animation-clouds 100s linear infinite;
+      -moz-animation: animation-clouds 100s linear infinite;
+      -ms-animation: animation-clouds 100s linear infinite;
+      -o-animation: animation-clouds 100s linear infinite;
+      animation: animation-clouds 100s linear infinite; }
+  body .bottom {
+    position: relative;
+    display: table-cell;
+    vertical-align: bottom; }
+  body .buttons {
+    text-align: center;
+    position: relative;
+    white-space: nowrap; }
+    body .buttons button {
+      margin-right: 0.5rem; }
+      body .buttons button:last-child {
+        margin-right: 0; }
+  body .checkbox {
+    width: 2.5rem;
+    height: 1.3rem;
+    position: relative;
+    background: #083039;
+    border-radius: 3rem;
+    padding: 0.15rem; }
+    body .checkbox input {
+      display: none; }
+      body .checkbox input[type="checkbox"]:checked + label {
+        left: 1.35rem;
+        background: #35c6e8; }
+    body .checkbox label {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      position: absolute;
+      left: 0.15rem;
+      background: #75959c;
+      min-height: 0;
+      min-width: 0;
+      padding: 0;
+      margin: 0 !important; }
+      body .checkbox label.animate {
+        transition: all 0.25s ease; }
+  body .container {
+    height: 100%;
+    max-width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    z-index: 20; }
+  body .darken {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0.8;
+    background: #083039; }
+  body .ellipsis:after, body #working-panel h3:after, #working-panel body h3:after {
+    content: "\2026"; }
+  body .float-nowrap {
+    width: 200%;
+    overflow: auto; }
+  body .float-right {
+    float: right; }
+  body .form-group, body #settings-panel .setting-group, #settings-panel body .setting-group {
+    position: relative;
+    margin-bottom: 1rem; }
+    body .form-group.btn-icon-container input, body #settings-panel .btn-icon-container.setting-group input, #settings-panel body .btn-icon-container.setting-group input {
+      padding-right: 2.3rem !important; }
+    body .form-group.btn-icon-container .btn-icon, body #settings-panel .btn-icon-container.setting-group .btn-icon, #settings-panel body .btn-icon-container.setting-group .btn-icon {
+      position: absolute;
+      top: 50%;
+      right: 0.3em;
+      margin-top: -1.05em;
+      height: 2.1em;
+      width: 2.1em;
+      font-size: 0.9em;
+      color: #edfeff;
+      border-radius: 3rem;
+      background-color: #7db2be;
+      z-index: 55; }
+      body .form-group.btn-icon-container .btn-icon:active, body #settings-panel .btn-icon-container.setting-group .btn-icon:active, #settings-panel body .btn-icon-container.setting-group .btn-icon:active {
+        background: #35c6e8 !important; }
+      body .form-group.btn-icon-container .btn-icon:hover, body #settings-panel .btn-icon-container.setting-group .btn-icon:hover, #settings-panel body .btn-icon-container.setting-group .btn-icon:hover {
+        background: #35c6e8; }
+      body .form-group.btn-icon-container .btn-icon:focus, body #settings-panel .btn-icon-container.setting-group .btn-icon:focus, #settings-panel body .btn-icon-container.setting-group .btn-icon:focus {
+        border: 1px solid #50909f; }
+        body .form-group.btn-icon-container .btn-icon:focus:hover, body #settings-panel .btn-icon-container.setting-group .btn-icon:focus:hover, #settings-panel body .btn-icon-container.setting-group .btn-icon:focus:hover {
+          border: none; }
+      body .form-group.btn-icon-container .btn-icon i, body #settings-panel .btn-icon-container.setting-group .btn-icon i, #settings-panel body .btn-icon-container.setting-group .btn-icon i {
+        position: absolute;
+        top: 50%;
+        margin: auto;
+        transform: translate(-50%, -50%);
+        opacity: 1 !important; }
+    body .form-group.has-error input.form-control, body #settings-panel .has-error.setting-group input.form-control, #settings-panel body .has-error.setting-group input.form-control,
+    body .form-group.has-error textarea.form-control,
+    body #settings-panel .has-error.setting-group textarea.form-control,
+    #settings-panel body .has-error.setting-group textarea.form-control {
+      border: 1px solid #ea3869 !important;
+      color: #ea3869 !important; }
+      body .form-group.has-error input.form-control::-webkit-input-placeholder, body #settings-panel .has-error.setting-group input.form-control::-webkit-input-placeholder, #settings-panel body .has-error.setting-group input.form-control::-webkit-input-placeholder,
+      body .form-group.has-error textarea.form-control::-webkit-input-placeholder,
+      body #settings-panel .has-error.setting-group textarea.form-control::-webkit-input-placeholder,
+      #settings-panel body .has-error.setting-group textarea.form-control::-webkit-input-placeholder {
+        color: #ea3869 !important;
+        opacity: 0.8 !important; }
+      body .form-group.has-error input.form-control:-moz-placeholder, body #settings-panel .has-error.setting-group input.form-control:-moz-placeholder, #settings-panel body .has-error.setting-group input.form-control:-moz-placeholder,
+      body .form-group.has-error textarea.form-control:-moz-placeholder,
+      body #settings-panel .has-error.setting-group textarea.form-control:-moz-placeholder,
+      #settings-panel body .has-error.setting-group textarea.form-control:-moz-placeholder {
+        color: #ea3869 !important;
+        opacity: 0.8 !important; }
+      body .form-group.has-error input.form-control::-moz-placeholder, body #settings-panel .has-error.setting-group input.form-control::-moz-placeholder, #settings-panel body .has-error.setting-group input.form-control::-moz-placeholder,
+      body .form-group.has-error textarea.form-control::-moz-placeholder,
+      body #settings-panel .has-error.setting-group textarea.form-control::-moz-placeholder,
+      #settings-panel body .has-error.setting-group textarea.form-control::-moz-placeholder {
+        color: #ea3869 !important;
+        opacity: 0.8 !important; }
+      body .form-group.has-error input.form-control:-ms-input-placeholder, body #settings-panel .has-error.setting-group input.form-control:-ms-input-placeholder, #settings-panel body .has-error.setting-group input.form-control:-ms-input-placeholder,
+      body .form-group.has-error textarea.form-control:-ms-input-placeholder,
+      body #settings-panel .has-error.setting-group textarea.form-control:-ms-input-placeholder,
+      #settings-panel body .has-error.setting-group textarea.form-control:-ms-input-placeholder {
+        color: #ea3869 !important;
+        opacity: 0.8 !important; }
+    body .form-group input.form-control, body #settings-panel .setting-group input.form-control, #settings-panel body .setting-group input.form-control,
+    body .form-group textarea.form-control,
+    body #settings-panel .setting-group textarea.form-control,
+    #settings-panel body .setting-group textarea.form-control {
+      font-size: 1rem;
+      background-color: #edfeff;
+      color: #083039;
+      resize: none;
+      border: none;
+      width: 100%; }
+      body .form-group input.form-control::-webkit-input-placeholder, body #settings-panel .setting-group input.form-control::-webkit-input-placeholder, #settings-panel body .setting-group input.form-control::-webkit-input-placeholder,
+      body .form-group textarea.form-control::-webkit-input-placeholder,
+      body #settings-panel .setting-group textarea.form-control::-webkit-input-placeholder,
+      #settings-panel body .setting-group textarea.form-control::-webkit-input-placeholder {
+        color: #75959c; }
+      body .form-group input.form-control:-moz-placeholder, body #settings-panel .setting-group input.form-control:-moz-placeholder, #settings-panel body .setting-group input.form-control:-moz-placeholder,
+      body .form-group textarea.form-control:-moz-placeholder,
+      body #settings-panel .setting-group textarea.form-control:-moz-placeholder,
+      #settings-panel body .setting-group textarea.form-control:-moz-placeholder {
+        color: #75959c; }
+      body .form-group input.form-control::-moz-placeholder, body #settings-panel .setting-group input.form-control::-moz-placeholder, #settings-panel body .setting-group input.form-control::-moz-placeholder,
+      body .form-group textarea.form-control::-moz-placeholder,
+      body #settings-panel .setting-group textarea.form-control::-moz-placeholder,
+      #settings-panel body .setting-group textarea.form-control::-moz-placeholder {
+        color: #75959c; }
+      body .form-group input.form-control:-ms-input-placeholder, body #settings-panel .setting-group input.form-control:-ms-input-placeholder, #settings-panel body .setting-group input.form-control:-ms-input-placeholder,
+      body .form-group textarea.form-control:-ms-input-placeholder,
+      body #settings-panel .setting-group textarea.form-control:-ms-input-placeholder,
+      #settings-panel body .setting-group textarea.form-control:-ms-input-placeholder {
+        color: #75959c; }
+    body .form-group input.form-control, body #settings-panel .setting-group input.form-control, #settings-panel body .setting-group input.form-control {
+      border-radius: 3rem;
+      line-height: 2.4rem;
+      padding: 0 1rem; }
+    
+    body .form-group textarea.form-control,
+    body #settings-panel .setting-group textarea.form-control,
+    #settings-panel body .setting-group textarea.form-control {
+      border-radius: 1.1rem;
+      line-height: 1.2rem;
+      padding: 0.5rem 1rem; }
+  body .header-panel {
+    position: relative;
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem; }
+    body .header-panel .btn-icon {
+      font-size: 1.3em;
+      line-height: 1.2em;
+      height: 1em; }
+      body .header-panel .btn-icon.btn-close, body .header-panel .btn-icon.btn-settings {
+        float: right; }
+      body .header-panel .btn-icon i {
+        vertical-align: middle; }
+  body .logo {
+    background: url("default128.png") 50% 1rem no-repeat;
+    background-size: 11.5rem;
+    flex: 0 0 17.5rem; }
+  body .lookahead-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap; }
+    body .lookahead-container .lookahead,
+    body .lookahead-container .measure {
+      margin: auto 0;
+      z-index: 60;
+      color: #75959c;
+      background-color: transparent;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none; }
+    body .lookahead-container .measure {
+      visibility: hidden; }
+  body .margin-bottom-0 {
+    margin-bottom: 0 !important; }
+  body .overlay, body .darker-overlay, body #qr-panel, body #working-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(8, 48, 57, 0.5); }
+    body .overlay.ng-hide-remove, body .ng-hide-remove.darker-overlay, body .ng-hide-remove#qr-panel, body .ng-hide-remove#working-panel {
+      opacity: 0;
+      transition: opacity 0.2s ease-in; }
+      body .overlay.ng-hide-remove.ng-hide-remove-active, body .ng-hide-remove.ng-hide-remove-active.darker-overlay, body .ng-hide-remove.ng-hide-remove-active#qr-panel, body .ng-hide-remove.ng-hide-remove-active#working-panel {
+        opacity: 1; }
+    body .overlay.ng-enter, body .ng-enter.darker-overlay, body .ng-enter#qr-panel, body .ng-enter#working-panel {
+      opacity: 0;
+      transition: opacity 0.2s ease-in; }
+      body .overlay.ng-enter.ng-enter-active, body .ng-enter.ng-enter-active.darker-overlay, body .ng-enter.ng-enter-active#qr-panel, body .ng-enter.ng-enter-active#working-panel {
+        opacity: 1; }
+    body .overlay.ng-hide-add, body .ng-hide-add.darker-overlay, body .ng-hide-add#qr-panel, body .ng-hide-add#working-panel {
+      transition: opacity 0.2s ease-in; }
+      body .overlay.ng-hide-add.ng-hide-add-active, body .ng-hide-add.ng-hide-add-active.darker-overlay, body .ng-hide-add.ng-hide-add-active#qr-panel, body .ng-hide-add.ng-hide-add-active#working-panel {
+        opacity: 0; }
+  body .darker-overlay, body #qr-panel {
+    background-color: rgba(8, 48, 57, 0.9) !important; }
+  body .progress-bar-success {
+    background-color: #30d278 !important; }
+  body .progress-bar-warning {
+    background-color: #bdc71b !important; }
+  body .progress-bar-danger {
+    background-color: #ea3869 !important; }
+  body .service-message {
+    padding: 1px;
+    overflow-y: auto;
+    font-style: italic;
+    quotes: "“" "”";
+    text-align: center; }
+    body .service-message:before {
+      content: open-quote; }
+    body .service-message:after {
+      content: close-quote; }
+  body .spinner-border {
+    animation-duration: 1s;
+    border-color: #35c6e8;
+    border-right-color: transparent; }
+  body .text-success {
+    color: #30d278 !important; }
+  body .text-warning {
+    color: #bdc71b !important; }
+  body .text-danger {
+    color: #ea3869 !important; }
+  body .validation {
+    font-size: 0.75rem;
+    line-height: 1.15rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    color: #fff;
+    background: #ea3869;
+    padding: 0 0.5rem;
+    z-index: 60;
+    border-radius: 3rem; }
+  body .view {
+    height: 100%;
+    width: 100%; }
+    body .view.ng-hide-remove {
+      opacity: 0;
+      transition: opacity 0.2s ease-in; }
+      body .view.ng-hide-remove.ng-hide-remove-active {
+        opacity: 1; }
+    body .view.ng-enter {
+      opacity: 0;
+      transition: opacity 0.2s ease-in; }
+      body .view.ng-enter.ng-enter-active {
+        opacity: 1; }
+    body .view .view-content {
+      display: flex;
+      flex-direction: column;
+      padding: 0.75rem; }
+  body .well, body #login-panel .form-content .confirm, #login-panel .form-content body .confirm,
+  body #login-panel .selected-service .confirm, #login-panel .selected-service body .confirm {
+    background-color: #edfeff;
+    color: #083039;
+    border-radius: 1.25rem;
+    border: none;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0.5rem 0.9rem 1.5rem rgba(0, 0, 0, 0.25); }
+    body .well a, body #login-panel .form-content .confirm a, #login-panel .form-content body .confirm a, body #login-panel .selected-service .confirm a, #login-panel .selected-service body .confirm a {
+      border-bottom-color: #083039; }
+      body .well a:active, body #login-panel .form-content .confirm a:active, #login-panel .form-content body .confirm a:active, body #login-panel .selected-service .confirm a:active, #login-panel .selected-service body .confirm a:active {
+        color: #35c6e8 !important;
+        border-bottom-color: #35c6e8 !important; }
+      body .well a:focus, body #login-panel .form-content .confirm a:focus, #login-panel .form-content body .confirm a:focus, body #login-panel .selected-service .confirm a:focus, #login-panel .selected-service body .confirm a:focus, body .well a:hover, body #login-panel .form-content .confirm a:hover, #login-panel .form-content body .confirm a:hover, body #login-panel .selected-service .confirm a:hover, #login-panel .selected-service body .confirm a:hover {
+        color: #35c6e8;
+        border-bottom-color: #35c6e8; }
+    body .well.dark, body #login-panel .form-content .dark.confirm, #login-panel .form-content body .dark.confirm,
+    body #login-panel .selected-service .dark.confirm, #login-panel .selected-service body .dark.confirm {
+      background-color: #083039;
+      color: #edfeff; }
+      body .well.dark a, body #login-panel .form-content .dark.confirm a, #login-panel .form-content body .dark.confirm a, body #login-panel .selected-service .dark.confirm a, #login-panel .selected-service body .dark.confirm a {
+        border-bottom-color: #edfeff; }
+        body .well.dark a:active, body #login-panel .form-content .dark.confirm a:active, #login-panel .form-content body .dark.confirm a:active, body #login-panel .selected-service .dark.confirm a:active, #login-panel .selected-service body .dark.confirm a:active, body .well.dark a:focus, body #login-panel .form-content .dark.confirm a:focus, #login-panel .form-content body .dark.confirm a:focus, body #login-panel .selected-service .dark.confirm a:focus, #login-panel .selected-service body .dark.confirm a:focus, body .well.dark a:hover, body #login-panel .form-content .dark.confirm a:hover, #login-panel .form-content body .dark.confirm a:hover, body #login-panel .selected-service .dark.confirm a:hover, #login-panel .selected-service body .dark.confirm a:hover {
+          border-bottom-color: inherit; }
+    body .well h4, body #login-panel .form-content .confirm h4, #login-panel .form-content body .confirm h4, body #login-panel .selected-service .confirm h4, #login-panel .selected-service body .confirm h4 {
+      text-align: center; }
+    body .well .btn.btn-default, body #login-panel .form-content .confirm .btn.btn-default, #login-panel .form-content body .confirm .btn.btn-default, body #login-panel .selected-service .confirm .btn.btn-default, #login-panel .selected-service body .confirm .btn.btn-default {
+      color: #083039;
+      border-color: #083039;
+      font-weight: normal;
+      border-width: 0.1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem; }
+      body .well .btn.btn-default:not([disabled]):active, body #login-panel .form-content .confirm .btn.btn-default:not([disabled]):active, #login-panel .form-content body .confirm .btn.btn-default:not([disabled]):active, body #login-panel .selected-service .confirm .btn.btn-default:not([disabled]):active, #login-panel .selected-service body .confirm .btn.btn-default:not([disabled]):active {
+        background-color: #083039 !important;
+        color: #35c6e8 !important;
+        border-color: #083039 !important; }
+      body .well .btn.btn-default:not([disabled]):hover, body #login-panel .form-content .confirm .btn.btn-default:not([disabled]):hover, #login-panel .form-content body .confirm .btn.btn-default:not([disabled]):hover, body #login-panel .selected-service .confirm .btn.btn-default:not([disabled]):hover, #login-panel .selected-service body .confirm .btn.btn-default:not([disabled]):hover {
+        background-color: #083039;
+        color: #35c6e8;
+        border-color: #083039; }
+      body .well .btn.btn-default[disabled], body #login-panel .form-content .confirm .btn.btn-default[disabled], #login-panel .form-content body .confirm .btn.btn-default[disabled], body #login-panel .selected-service .confirm .btn.btn-default[disabled], #login-panel .selected-service body .confirm .btn.btn-default[disabled] {
+        border-color: #083039;
+        color: #083039; }
+    body .well .confirm, body #login-panel .form-content .confirm .confirm, #login-panel .form-content body .confirm .confirm, body #login-panel .selected-service .confirm .confirm, #login-panel .selected-service body .confirm .confirm {
+      margin-bottom: 0;
+      width: 100%; }
+      body .well .confirm button, body #login-panel .form-content .confirm .confirm button, #login-panel .form-content body .confirm .confirm button, body #login-panel .selected-service .confirm .confirm button, #login-panel .selected-service body .confirm .confirm button {
+        margin-right: 0.5rem; }
+        body .well .confirm button:last-child, body #login-panel .form-content .confirm .confirm button:last-child, #login-panel .form-content body .confirm .confirm button:last-child, body #login-panel .selected-service .confirm .confirm button:last-child, #login-panel .selected-service body .confirm .confirm button:last-child {
+          margin-right: 0; }
+    body .well .form-group.has-error input.form-control, body #login-panel .form-content .confirm .form-group.has-error input.form-control, #login-panel .form-content body .confirm .form-group.has-error input.form-control, body #login-panel .selected-service .confirm .form-group.has-error input.form-control, #login-panel .selected-service body .confirm .form-group.has-error input.form-control, body .well #settings-panel .has-error.setting-group input.form-control, #settings-panel body .well .has-error.setting-group input.form-control, body #login-panel .form-content .confirm #settings-panel .has-error.setting-group input.form-control, #settings-panel body #login-panel .form-content .confirm .has-error.setting-group input.form-control, #login-panel .form-content body .confirm #settings-panel .has-error.setting-group input.form-control, #settings-panel #login-panel .form-content body .confirm .has-error.setting-group input.form-control, body #login-panel .selected-service .confirm #settings-panel .has-error.setting-group input.form-control, #settings-panel body #login-panel .selected-service .confirm .has-error.setting-group input.form-control, #login-panel .selected-service body .confirm #settings-panel .has-error.setting-group input.form-control, #settings-panel #login-panel .selected-service body .confirm .has-error.setting-group input.form-control,
+    body .well .form-group.has-error textarea.form-control,
+    body #login-panel .form-content .confirm .form-group.has-error textarea.form-control,
+    #login-panel .form-content body .confirm .form-group.has-error textarea.form-control,
+    body #login-panel .selected-service .confirm .form-group.has-error textarea.form-control,
+    #login-panel .selected-service body .confirm .form-group.has-error textarea.form-control,
+    body .well #settings-panel .has-error.setting-group textarea.form-control,
+    #settings-panel body .well .has-error.setting-group textarea.form-control,
+    body #login-panel .form-content .confirm #settings-panel .has-error.setting-group textarea.form-control,
+    #settings-panel body #login-panel .form-content .confirm .has-error.setting-group textarea.form-control,
+    #login-panel .form-content body .confirm #settings-panel .has-error.setting-group textarea.form-control,
+    #settings-panel #login-panel .form-content body .confirm .has-error.setting-group textarea.form-control,
+    body #login-panel .selected-service .confirm #settings-panel .has-error.setting-group textarea.form-control,
+    #settings-panel body #login-panel .selected-service .confirm .has-error.setting-group textarea.form-control,
+    #login-panel .selected-service body .confirm #settings-panel .has-error.setting-group textarea.form-control,
+    #settings-panel #login-panel .selected-service body .confirm .has-error.setting-group textarea.form-control {
+      border-color: #ea3869 !important;
+      color: #ea3869 !important; }
+      body .well .form-group.has-error input.form-control::-webkit-input-placeholder, body #login-panel .form-content .confirm .form-group.has-error input.form-control::-webkit-input-placeholder, #login-panel .form-content body .confirm .form-group.has-error input.form-control::-webkit-input-placeholder, body #login-panel .selected-service .confirm .form-group.has-error input.form-control::-webkit-input-placeholder, #login-panel .selected-service body .confirm .form-group.has-error input.form-control::-webkit-input-placeholder, body .well #settings-panel .has-error.setting-group input.form-control::-webkit-input-placeholder, #settings-panel body .well .has-error.setting-group input.form-control::-webkit-input-placeholder, body #login-panel .form-content .confirm #settings-panel .has-error.setting-group input.form-control::-webkit-input-placeholder, #settings-panel body #login-panel .form-content .confirm .has-error.setting-group input.form-control::-webkit-input-placeholder, #login-panel .form-content body .confirm #settings-panel .has-error.setting-group input.form-control::-webkit-input-placeholder, #settings-panel #login-panel .form-content body .confirm .has-error.setting-group input.form-control::-webkit-input-placeholder, body #login-panel .selected-service .confirm #settings-panel .has-error.setting-group input.form-control::-webkit-input-placeholder, #settings-panel body #login-panel .selected-service .confirm .has-error.setting-group input.form-control::-webkit-input-placeholder, #login-panel .selected-service body .confirm #settings-panel .has-error.setting-group input.form-control::-webkit-input-placeholder, #settings-panel #login-panel .selected-service body .confirm .has-error.setting-group input.form-control::-webkit-input-placeholder,
+      body .well .form-group.has-error textarea.form-control::-webkit-input-placeholder,
+      body #login-panel .form-content .confirm .form-group.has-error textarea.form-control::-webkit-input-placeholder,
+      #login-panel .form-content body .confirm .form-group.has-error textarea.form-control::-webkit-input-placeholder,
+      body #login-panel .selected-service .confirm .form-group.has-error textarea.form-control::-webkit-input-placeholder,
+      #login-panel .selected-service body .confirm .form-group.has-error textarea.form-control::-webkit-input-placeholder,
+      body .well #settings-panel .has-error.setting-group textarea.form-control::-webkit-input-placeholder,
+      #settings-panel body .well .has-error.setting-group textarea.form-control::-webkit-input-placeholder,
+      body #login-panel .form-content .confirm #settings-panel .has-error.setting-group textarea.form-control::-webkit-input-placeholder,
+      #settings-panel body #login-panel .form-content .confirm .has-error.setting-group textarea.form-control::-webkit-input-placeholder,
+      #login-panel .form-content body .confirm #settings-panel .has-error.setting-group textarea.form-control::-webkit-input-placeholder,
+      #settings-panel #login-panel .form-content body .confirm .has-error.setting-group textarea.form-control::-webkit-input-placeholder,
+      body #login-panel .selected-service .confirm #settings-panel .has-error.setting-group textarea.form-control::-webkit-input-placeholder,
+      #settings-panel body #login-panel .selected-service .confirm .has-error.setting-group textarea.form-control::-webkit-input-placeholder,
+      #login-panel .selected-service body .confirm #settings-panel .has-error.setting-group textarea.form-control::-webkit-input-placeholder,
+      #settings-panel #login-panel .selected-service body .confirm .has-error.setting-group textarea.form-control::-webkit-input-placeholder {
+        color: #ea3869 !important;
+        opacity: 0.8 !important; }
+      body .well .form-group.has-error input.form-control:-moz-placeholder, body #login-panel .form-content .confirm .form-group.has-error input.form-control:-moz-placeholder, #login-panel .form-content body .confirm .form-group.has-error input.form-control:-moz-placeholder, body #login-panel .selected-service .confirm .form-group.has-error input.form-control:-moz-placeholder, #login-panel .selected-service body .confirm .form-group.has-error input.form-control:-moz-placeholder, body .well #settings-panel .has-error.setting-group input.form-control:-moz-placeholder, #settings-panel body .well .has-error.setting-group input.form-control:-moz-placeholder, body #login-panel .form-content .confirm #settings-panel .has-error.setting-group input.form-control:-moz-placeholder, #settings-panel body #login-panel .form-content .confirm .has-error.setting-group input.form-control:-moz-placeholder, #login-panel .form-content body .confirm #settings-panel .has-error.setting-group input.form-control:-moz-placeholder, #settings-panel #login-panel .form-content body .confirm .has-error.setting-group input.form-control:-moz-placeholder, body #login-panel .selected-service .confirm #settings-panel .has-error.setting-group input.form-control:-moz-placeholder, #settings-panel body #login-panel .selected-service .confirm .has-error.setting-group input.form-control:-moz-placeholder, #login-panel .selected-service body .confirm #settings-panel .has-error.setting-group input.form-control:-moz-placeholder, #settings-panel #login-panel .selected-service body .confirm .has-error.setting-group input.form-control:-moz-placeholder,
+      body .well .form-group.has-error textarea.form-control:-moz-placeholder,
+      body #login-panel .form-content .confirm .form-group.has-error textarea.form-control:-moz-placeholder,
+      #login-panel .form-content body .confirm .form-group.has-error textarea.form-control:-moz-placeholder,
+      body #login-panel .selected-service .confirm .form-group.has-error textarea.form-control:-moz-placeholder,
+      #login-panel .selected-service body .confirm .form-group.has-error textarea.form-control:-moz-placeholder,
+      body .well #settings-panel .has-error.setting-group textarea.form-control:-moz-placeholder,
+      #settings-panel body .well .has-error.setting-group textarea.form-control:-moz-placeholder,
+      body #login-panel .form-content .confirm #settings-panel .has-error.setting-group textarea.form-control:-moz-placeholder,
+      #settings-panel body #login-panel .form-content .confirm .has-error.setting-group textarea.form-control:-moz-placeholder,
+      #login-panel .form-content body .confirm #settings-panel .has-error.setting-group textarea.form-control:-moz-placeholder,
+      #settings-panel #login-panel .form-content body .confirm .has-error.setting-group textarea.form-control:-moz-placeholder,
+      body #login-panel .selected-service .confirm #settings-panel .has-error.setting-group textarea.form-control:-moz-placeholder,
+      #settings-panel body #login-panel .selected-service .confirm .has-error.setting-group textarea.form-control:-moz-placeholder,
+      #login-panel .selected-service body .confirm #settings-panel .has-error.setting-group textarea.form-control:-moz-placeholder,
+      #settings-panel #login-panel .selected-service body .confirm .has-error.setting-group textarea.form-control:-moz-placeholder {
+        color: #ea3869 !important;
+        opacity: 0.8 !important; }
+      body .well .form-group.has-error input.form-control::-moz-placeholder, body #login-panel .form-content .confirm .form-group.has-error input.form-control::-moz-placeholder, #login-panel .form-content body .confirm .form-group.has-error input.form-control::-moz-placeholder, body #login-panel .selected-service .confirm .form-group.has-error input.form-control::-moz-placeholder, #login-panel .selected-service body .confirm .form-group.has-error input.form-control::-moz-placeholder, body .well #settings-panel .has-error.setting-group input.form-control::-moz-placeholder, #settings-panel body .well .has-error.setting-group input.form-control::-moz-placeholder, body #login-panel .form-content .confirm #settings-panel .has-error.setting-group input.form-control::-moz-placeholder, #settings-panel body #login-panel .form-content .confirm .has-error.setting-group input.form-control::-moz-placeholder, #login-panel .form-content body .confirm #settings-panel .has-error.setting-group input.form-control::-moz-placeholder, #settings-panel #login-panel .form-content body .confirm .has-error.setting-group input.form-control::-moz-placeholder, body #login-panel .selected-service .confirm #settings-panel .has-error.setting-group input.form-control::-moz-placeholder, #settings-panel body #login-panel .selected-service .confirm .has-error.setting-group input.form-control::-moz-placeholder, #login-panel .selected-service body .confirm #settings-panel .has-error.setting-group input.form-control::-moz-placeholder, #settings-panel #login-panel .selected-service body .confirm .has-error.setting-group input.form-control::-moz-placeholder,
+      body .well .form-group.has-error textarea.form-control::-moz-placeholder,
+      body #login-panel .form-content .confirm .form-group.has-error textarea.form-control::-moz-placeholder,
+      #login-panel .form-content body .confirm .form-group.has-error textarea.form-control::-moz-placeholder,
+      body #login-panel .selected-service .confirm .form-group.has-error textarea.form-control::-moz-placeholder,
+      #login-panel .selected-service body .confirm .form-group.has-error textarea.form-control::-moz-placeholder,
+      body .well #settings-panel .has-error.setting-group textarea.form-control::-moz-placeholder,
+      #settings-panel body .well .has-error.setting-group textarea.form-control::-moz-placeholder,
+      body #login-panel .form-content .confirm #settings-panel .has-error.setting-group textarea.form-control::-moz-placeholder,
+      #settings-panel body #login-panel .form-content .confirm .has-error.setting-group textarea.form-control::-moz-placeholder,
+      #login-panel .form-content body .confirm #settings-panel .has-error.setting-group textarea.form-control::-moz-placeholder,
+      #settings-panel #login-panel .form-content body .confirm .has-error.setting-group textarea.form-control::-moz-placeholder,
+      body #login-panel .selected-service .confirm #settings-panel .has-error.setting-group textarea.form-control::-moz-placeholder,
+      #settings-panel body #login-panel .selected-service .confirm .has-error.setting-group textarea.form-control::-moz-placeholder,
+      #login-panel .selected-service body .confirm #settings-panel .has-error.setting-group textarea.form-control::-moz-placeholder,
+      #settings-panel #login-panel .selected-service body .confirm .has-error.setting-group textarea.form-control::-moz-placeholder {
+        color: #ea3869 !important;
+        opacity: 0.8 !important; }
+      body .well .form-group.has-error input.form-control:-ms-input-placeholder, body #login-panel .form-content .confirm .form-group.has-error input.form-control:-ms-input-placeholder, #login-panel .form-content body .confirm .form-group.has-error input.form-control:-ms-input-placeholder, body #login-panel .selected-service .confirm .form-group.has-error input.form-control:-ms-input-placeholder, #login-panel .selected-service body .confirm .form-group.has-error input.form-control:-ms-input-placeholder, body .well #settings-panel .has-error.setting-group input.form-control:-ms-input-placeholder, #settings-panel body .well .has-error.setting-group input.form-control:-ms-input-placeholder, body #login-panel .form-content .confirm #settings-panel .has-error.setting-group input.form-control:-ms-input-placeholder, #settings-panel body #login-panel .form-content .confirm .has-error.setting-group input.form-control:-ms-input-placeholder, #login-panel .form-content body .confirm #settings-panel .has-error.setting-group input.form-control:-ms-input-placeholder, #settings-panel #login-panel .form-content body .confirm .has-error.setting-group input.form-control:-ms-input-placeholder, body #login-panel .selected-service .confirm #settings-panel .has-error.setting-group input.form-control:-ms-input-placeholder, #settings-panel body #login-panel .selected-service .confirm .has-error.setting-group input.form-control:-ms-input-placeholder, #login-panel .selected-service body .confirm #settings-panel .has-error.setting-group input.form-control:-ms-input-placeholder, #settings-panel #login-panel .selected-service body .confirm .has-error.setting-group input.form-control:-ms-input-placeholder,
+      body .well .form-group.has-error textarea.form-control:-ms-input-placeholder,
+      body #login-panel .form-content .confirm .form-group.has-error textarea.form-control:-ms-input-placeholder,
+      #login-panel .form-content body .confirm .form-group.has-error textarea.form-control:-ms-input-placeholder,
+      body #login-panel .selected-service .confirm .form-group.has-error textarea.form-control:-ms-input-placeholder,
+      #login-panel .selected-service body .confirm .form-group.has-error textarea.form-control:-ms-input-placeholder,
+      body .well #settings-panel .has-error.setting-group textarea.form-control:-ms-input-placeholder,
+      #settings-panel body .well .has-error.setting-group textarea.form-control:-ms-input-placeholder,
+      body #login-panel .form-content .confirm #settings-panel .has-error.setting-group textarea.form-control:-ms-input-placeholder,
+      #settings-panel body #login-panel .form-content .confirm .has-error.setting-group textarea.form-control:-ms-input-placeholder,
+      #login-panel .form-content body .confirm #settings-panel .has-error.setting-group textarea.form-control:-ms-input-placeholder,
+      #settings-panel #login-panel .form-content body .confirm .has-error.setting-group textarea.form-control:-ms-input-placeholder,
+      body #login-panel .selected-service .confirm #settings-panel .has-error.setting-group textarea.form-control:-ms-input-placeholder,
+      #settings-panel body #login-panel .selected-service .confirm .has-error.setting-group textarea.form-control:-ms-input-placeholder,
+      #login-panel .selected-service body .confirm #settings-panel .has-error.setting-group textarea.form-control:-ms-input-placeholder,
+      #settings-panel #login-panel .selected-service body .confirm .has-error.setting-group textarea.form-control:-ms-input-placeholder {
+        color: #ea3869 !important;
+        opacity: 0.8 !important; }
+    body .well .form-group input.form-control, body #login-panel .form-content .confirm .form-group input.form-control, #login-panel .form-content body .confirm .form-group input.form-control, body #login-panel .selected-service .confirm .form-group input.form-control, #login-panel .selected-service body .confirm .form-group input.form-control, body .well #settings-panel .setting-group input.form-control, #settings-panel body .well .setting-group input.form-control, body #login-panel .form-content .confirm #settings-panel .setting-group input.form-control, #settings-panel body #login-panel .form-content .confirm .setting-group input.form-control, #login-panel .form-content body .confirm #settings-panel .setting-group input.form-control, #settings-panel #login-panel .form-content body .confirm .setting-group input.form-control, body #login-panel .selected-service .confirm #settings-panel .setting-group input.form-control, #settings-panel body #login-panel .selected-service .confirm .setting-group input.form-control, #login-panel .selected-service body .confirm #settings-panel .setting-group input.form-control, #settings-panel #login-panel .selected-service body .confirm .setting-group input.form-control,
+    body .well .form-group textarea.form-control,
+    body #login-panel .form-content .confirm .form-group textarea.form-control,
+    #login-panel .form-content body .confirm .form-group textarea.form-control,
+    body #login-panel .selected-service .confirm .form-group textarea.form-control,
+    #login-panel .selected-service body .confirm .form-group textarea.form-control,
+    body .well #settings-panel .setting-group textarea.form-control,
+    #settings-panel body .well .setting-group textarea.form-control,
+    body #login-panel .form-content .confirm #settings-panel .setting-group textarea.form-control,
+    #settings-panel body #login-panel .form-content .confirm .setting-group textarea.form-control,
+    #login-panel .form-content body .confirm #settings-panel .setting-group textarea.form-control,
+    #settings-panel #login-panel .form-content body .confirm .setting-group textarea.form-control,
+    body #login-panel .selected-service .confirm #settings-panel .setting-group textarea.form-control,
+    #settings-panel body #login-panel .selected-service .confirm .setting-group textarea.form-control,
+    #login-panel .selected-service body .confirm #settings-panel .setting-group textarea.form-control,
+    #settings-panel #login-panel .selected-service body .confirm .setting-group textarea.form-control {
+      border: 1px solid #083039 !important; }
+
+#bookmark-panel > div {
+  display: flex;
+  flex-flow: column; }
+
+#bookmark-panel input[type="text"] {
+  width: 100%;
+  text-overflow: ellipsis; }
+
+#bookmark-panel #bookmarkForm {
+  display: flex;
+  flex-flow: column;
+  height: 100%; }
+
+#bookmark-panel .btn-delete-bookmark {
+  background-color: #ea3869; }
+  #bookmark-panel .btn-delete-bookmark:not([disabled]):active, #bookmark-panel .btn-delete-bookmark:not([disabled]):hover {
+    background-color: #edfeff;
+    color: #ea3869;
+    border-color: #edfeff; }
+
+#bookmark-panel .buttons,
+#bookmark-panel .form-group,
+#bookmark-panel #settings-panel .setting-group,
+#settings-panel #bookmark-panel .setting-group,
+#bookmark-panel .header-panel {
+  flex: none; }
+
+#bookmark-panel .mobile-landscape {
+  overflow: hidden;
+  margin-bottom: 1rem; }
+
+#bookmark-panel .tags-container {
+  height: calc(100% - 3.1rem);
+  overflow: auto;
+  margin-bottom: 0;
+  margin-top: 1rem; }
+  #bookmark-panel .tags-container .badge {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0.5rem 0.5rem 0;
+    color: rgba(237, 254, 255, 0.9);
+    background-color: #083039;
+    border: 0;
+    font-size: 0.85rem;
+    font-weight: normal;
+    line-height: 1.2rem;
+    max-width: 99%; }
+    #bookmark-panel .tags-container .badge:active i {
+      color: #35c6e8 !important; }
+    #bookmark-panel .tags-container .badge:hover, #bookmark-panel .tags-container .badge:focus {
+      cursor: pointer; }
+      #bookmark-panel .tags-container .badge:hover i, #bookmark-panel .tags-container .badge:focus i {
+        color: #35c6e8; }
+    #bookmark-panel .tags-container .badge i {
+      transition: color ease-in-out 0.2s;
+      color: #75959c; }
+    #bookmark-panel .tags-container .badge span {
+      margin-right: 0.3rem;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: normal;
+      white-space: nowrap; }
+      #bookmark-panel .tags-container .badge span:hover {
+        color: inherit; }
+
+#bookmark-panel .tags-input-container {
+  border-radius: 3rem;
+  background-color: #edfeff;
+  overflow: hidden;
+  margin-bottom: 0; }
+  #bookmark-panel .tags-input-container input {
+    text-transform: lowercase;
+    position: relative;
+    z-index: 50;
+    background: transparent; }
+  #bookmark-panel .tags-input-container .lookahead-container {
+    top: 0;
+    left: 1rem; }
+    #bookmark-panel .tags-input-container .lookahead-container .lookahead,
+    #bookmark-panel .tags-input-container .lookahead-container .measure {
+      text-transform: lowercase; }
+
+#bookmark-panel .textarea-container {
+  flex: 1 0 10rem;
+  display: flex; }
+
+#login-panel form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%; }
+  #login-panel form .form-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #login-panel form .form-content > div {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 10; }
+
+#login-panel .btn-new-sync {
+  text-transform: capitalize; }
+
+#login-panel .btn-show-password:before {
+  position: absolute;
+  top: 50%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  transition: opacity ease-in-out 0.2s;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900; }
+
+#login-panel .btn-show-password.active:before {
+  opacity: 0; }
+
+#login-panel .btn-validating {
+  background-color: #edfeff;
+  border-color: #edfeff;
+  color: #35c6e8;
+  opacity: 1; }
+  #login-panel .btn-validating .spinner-border-sm {
+    border-color: #35c6e8;
+    border-right-color: transparent;
+    height: 0.9rem;
+    width: 0.9rem; }
+
+#login-panel .confirm {
+  margin-bottom: 0;
+  z-index: 10; }
+
+#login-panel .form-content a:active, #login-panel .form-content a:focus, #login-panel .form-content a:hover,
+#login-panel .selected-service a:active,
+#login-panel .selected-service a:focus,
+#login-panel .selected-service a:hover {
+  color: #083039;
+  border-bottom-color: #083039; }
+
+#login-panel .form-group input, #login-panel #settings-panel .setting-group input, #settings-panel #login-panel .setting-group input {
+  width: 100%;
+  font-family: "Source Code Pro", "Courier New", monospace;
+  line-height: 1.45rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #edfeff; }
+  #login-panel .form-group input::-webkit-input-placeholder, #login-panel #settings-panel .setting-group input::-webkit-input-placeholder, #settings-panel #login-panel .setting-group input::-webkit-input-placeholder {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.1rem; }
+  #login-panel .form-group input:-moz-placeholder, #login-panel #settings-panel .setting-group input:-moz-placeholder, #settings-panel #login-panel .setting-group input:-moz-placeholder {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.1rem; }
+  #login-panel .form-group input::-moz-placeholder, #login-panel #settings-panel .setting-group input::-moz-placeholder, #settings-panel #login-panel .setting-group input::-moz-placeholder {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.1rem; }
+  #login-panel .form-group input:-ms-input-placeholder, #login-panel #settings-panel .setting-group input:-ms-input-placeholder, #settings-panel #login-panel .setting-group input:-ms-input-placeholder {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.1rem; }
+  #login-panel .form-group input[name="newServiceUrl"], #login-panel #settings-panel .setting-group input[name="newServiceUrl"], #settings-panel #login-panel .setting-group input[name="newServiceUrl"] {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.1rem; }
+
+#login-panel .header-panel {
+  z-index: 10; }
+
+#login-panel .login-form-existing,
+#login-panel .login-form-new,
+#login-panel .update-service-panel {
+  height: 100%;
+  max-width: 22rem; }
+
+#login-panel .login-form-existing input[name="txtPassword"] {
+  padding-right: 2.7rem; }
+
+#login-panel .login-form-new input[name="txtPassword"] {
+  position: relative;
+  z-index: 20;
+  background: transparent; }
+
+#login-panel .secret-form-group {
+  margin-bottom: 1.5rem; }
+  #login-panel .secret-form-group .progress,
+  #login-panel .secret-form-group .progress-bar-background {
+    position: absolute;
+    top: 0;
+    font-size: 1.2rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem; }
+  #login-panel .secret-form-group .progress {
+    background-color: transparent;
+    border: solid 0.1rem #edfeff;
+    z-index: 10; }
+    #login-panel .secret-form-group .progress .progress-bar {
+      background-color: #ea3869; }
+  #login-panel .secret-form-group .progress-bar-background {
+    background-color: #edfeff; }
+
+#login-panel .selected-service {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0.75rem; }
+  #login-panel .selected-service a {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+    white-space: nowrap; }
+  #login-panel .selected-service label {
+    white-space: nowrap;
+    flex: 0 0;
+    margin: 0 0.3rem 0 0; }
+  #login-panel .selected-service .service-status {
+    position: relative;
+    margin-left: 0.25rem;
+    top: 0.1rem; }
+    #login-panel .selected-service .service-status .loading .spinner-border {
+      border-color: #edfeff;
+      border-right-color: transparent; }
+    #login-panel .selected-service .service-status .status-background {
+      position: absolute;
+      top: 0.2rem;
+      left: 0.1rem;
+      height: 0.8rem;
+      width: 0.8rem;
+      z-index: -1;
+      border-radius: 100%;
+      background-color: #edfeff; }
+
+#login-panel .toggle-form {
+  text-align: center;
+  margin-top: 1.5rem; }
+
+#login-panel .update-service-panel .service-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  #login-panel .update-service-panel .service-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 1rem 0.75rem; }
+    #login-panel .update-service-panel .service-info ul li {
+      position: relative;
+      padding-left: 40%;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: normal;
+      white-space: nowrap; }
+      #login-panel .update-service-panel .service-info ul li label {
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        margin-bottom: 0;
+        color: #083039 !important; }
+  #login-panel .update-service-panel .service-info .service-message {
+    max-height: 5rem;
+    margin: 0 1rem 1rem; }
+  #login-panel .update-service-panel .service-info .service-warning {
+    font-size: 0.9rem;
+    line-height: 1.2rem; }
+
+#search-panel .view-content {
+  display: flex;
+  flex-flow: column;
+  padding: 0; }
+  #search-panel .view-content .bookmark-list .bookmark {
+    border: none;
+    border-radius: 1.25rem;
+    padding: 0;
+    margin: 0 0 0.75rem;
+    max-height: 25rem;
+    overflow: hidden;
+    transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+    position: relative;
+    box-shadow: 0.5rem 0.9rem 1.5rem rgba(0, 0, 0, 0.25); }
+    #search-panel .view-content .bookmark-list .bookmark:focus > .bookmark-content, #search-panel .view-content .bookmark-list .bookmark:hover > .bookmark-content {
+      background-color: #b9f0fd; }
+    #search-panel .view-content .bookmark-list .bookmark:hover {
+      cursor: pointer; }
+      #search-panel .view-content .bookmark-list .bookmark:hover > .btn-edit-bookmark {
+        opacity: 0.4; }
+    #search-panel .view-content .bookmark-list .bookmark.folder {
+      color: #edfeff;
+      box-shadow: none;
+      transition: background-color ease-in-out 0.2s;
+      max-height: none; }
+      #search-panel .view-content .bookmark-list .bookmark.folder:hover {
+        cursor: default; }
+      #search-panel .view-content .bookmark-list .bookmark.folder.open > .bookmark-content > .bookmark-heading {
+        margin-bottom: 0.75rem; }
+        #search-panel .view-content .bookmark-list .bookmark.folder.open > .bookmark-content > .bookmark-heading:before {
+          content: "";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900; }
+        #search-panel .view-content .bookmark-list .bookmark.folder.open > .bookmark-content > .bookmark-heading:hover:after {
+          content: "";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900; }
+      #search-panel .view-content .bookmark-list .bookmark.folder > .bookmark-content {
+        padding: 0.5rem 1rem;
+        background-color: rgba(8, 48, 57, 0.3); }
+        #search-panel .view-content .bookmark-list .bookmark.folder > .bookmark-content > .bookmark-heading {
+          color: #edfeff;
+          padding-left: 1.75rem; }
+          #search-panel .view-content .bookmark-list .bookmark.folder > .bookmark-content > .bookmark-heading:before {
+            position: absolute;
+            left: 1rem;
+            content: "";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900; }
+          #search-panel .view-content .bookmark-list .bookmark.folder > .bookmark-content > .bookmark-heading:after {
+            position: absolute;
+            right: 1rem;
+            opacity: 0;
+            font-size: 1.3em;
+            color: #35c6e8;
+            content: "";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900; }
+          #search-panel .view-content .bookmark-list .bookmark.folder > .bookmark-content > .bookmark-heading:hover {
+            cursor: pointer; }
+            #search-panel .view-content .bookmark-list .bookmark.folder > .bookmark-content > .bookmark-heading:hover:not(.opening):after {
+              opacity: 0.6; }
+        #search-panel .view-content .bookmark-list .bookmark.folder > .bookmark-content .empty {
+          margin: 0.25rem 0 0;
+          text-align: center;
+          font-style: italic; }
+        #search-panel .view-content .bookmark-list .bookmark.folder > .bookmark-content .spinner-border {
+          position: absolute;
+          right: 1rem;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          opacity: 0.6; }
+    #search-panel .view-content .bookmark-list .bookmark.ng-leave.ng-leave-active {
+      margin-bottom: 0;
+      max-height: 0;
+      opacity: 0; }
+    #search-panel .view-content .bookmark-list .bookmark.separator {
+      height: 0.5rem;
+      background-color: rgba(8, 48, 57, 0.15);
+      box-shadow: none; }
+      #search-panel .view-content .bookmark-list .bookmark.separator:hover {
+        cursor: default; }
+    #search-panel .view-content .bookmark-list .bookmark .bookmark-content {
+      background-color: #edfeff;
+      border-radius: 1.25rem;
+      padding: 0.5rem 1rem 0.75rem;
+      transition: background-color ease-in-out 0.2s; }
+      #search-panel .view-content .bookmark-list .bookmark .bookmark-content .bookmark-heading {
+        color: #083039;
+        font-size: 1.2rem;
+        font-weight: normal;
+        line-height: 1.75rem;
+        margin-bottom: 0;
+        margin-right: 1.5rem;
+        transition: color ease-in-out 0.2s;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: normal;
+        white-space: nowrap; }
+      #search-panel .view-content .bookmark-list .bookmark .bookmark-content .bookmark-text {
+        color: #083039; }
+        #search-panel .view-content .bookmark-list .bookmark .bookmark-content .bookmark-text .description, #search-panel .view-content .bookmark-list .bookmark .bookmark-content .bookmark-text #settings-panel .sync-panel .updates-available, #settings-panel .sync-panel #search-panel .view-content .bookmark-list .bookmark .bookmark-content .bookmark-text .updates-available {
+          font-size: 0.9rem;
+          font-style: italic;
+          line-height: 1.15rem; }
+        #search-panel .view-content .bookmark-list .bookmark .bookmark-content .bookmark-text .url {
+          font-size: 0.85rem;
+          color: #75959c;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%; }
+    #search-panel .view-content .bookmark-list .bookmark .btn-edit-bookmark {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      font-size: 1.1rem;
+      opacity: 0; }
+      #search-panel .view-content .bookmark-list .bookmark .btn-edit-bookmark:hover {
+        opacity: 1; }
+    #search-panel .view-content .bookmark-list .bookmark .menu {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: rgba(8, 48, 57, 0.8);
+      text-align: center;
+      border-radius: 1.25rem;
+      z-index: 60;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none; }
+      #search-panel .view-content .bookmark-list .bookmark .menu button {
+        position: static;
+        background-color: #edfeff;
+        color: #083039; }
+        #search-panel .view-content .bookmark-list .bookmark .menu button.btn-delete-bookmark {
+          color: #ea3869; }
+  #search-panel .view-content .bookmark-tree-panel,
+  #search-panel .view-content .search-results-panel {
+    flex: 0 1 100%;
+    overflow: auto;
+    padding: 0 0.75rem; }
+    #search-panel .view-content .bookmark-tree-panel > h4,
+    #search-panel .view-content .search-results-panel > h4 {
+      font-size: 1.4rem;
+      font-weight: normal;
+      text-align: center; }
+  #search-panel .view-content .header-panel {
+    flex: none;
+    margin-bottom: 0;
+    padding: 0.75rem; }
+    #search-panel .view-content .header-panel .btn.btn-icon {
+      margin-left: 0.5rem; }
+    #search-panel .view-content .header-panel .btn.btn-toggle-bookmark.active i {
+      font-weight: 900; }
+    #search-panel .view-content .header-panel .search-form {
+      flex: 0 1 100%;
+      position: relative;
+      border-radius: 3rem;
+      background-color: #edfeff;
+      margin-bottom: 0; }
+      #search-panel .view-content .header-panel .search-form label {
+        position: absolute;
+        top: 50%;
+        left: 0.75rem;
+        font-size: 0.85em;
+        margin-top: -0.5em;
+        margin-bottom: 0;
+        color: #75959c;
+        z-index: 60; }
+      #search-panel .view-content .header-panel .search-form input {
+        position: relative;
+        z-index: 50;
+        padding: 0 1.5em;
+        font-size: 1.1em;
+        background: transparent;
+        width: 100%;
+        line-height: 1.5em;
+        border: none; }
+        #search-panel .view-content .header-panel .search-form input::-webkit-input-placeholder {
+          color: #75959c; }
+        #search-panel .view-content .header-panel .search-form input:-moz-placeholder {
+          color: #75959c; }
+        #search-panel .view-content .header-panel .search-form input::-moz-placeholder {
+          color: #75959c; }
+        #search-panel .view-content .header-panel .search-form input:-ms-input-placeholder {
+          color: #75959c; }
+      #search-panel .view-content .header-panel .search-form .btn-clear {
+        height: 1.7em;
+        width: 1.7em;
+        margin-top: -0.85em;
+        font-size: 0.7em;
+        line-height: 1.5em; }
+      #search-panel .view-content .header-panel .search-form .lookahead-container {
+        font-size: 1.1em;
+        top: 0;
+        left: 1.5em;
+        width: calc(100% - 3em); }
+  #search-panel .view-content .search-results-panel.ng-hide {
+    margin-top: 0; }
+
+#settings-panel a {
+  border-bottom-color: #083039; }
+  #settings-panel a:active, #settings-panel a:focus, #settings-panel a:hover {
+    border-bottom-color: inherit; }
+
+#settings-panel .about-panel .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem; }
+  #settings-panel .about-panel .buttons button {
+    margin-right: 0; }
+    #settings-panel .about-panel .buttons button#support {
+      text-transform: none; }
+
+#settings-panel .backup-restore-panel #restoreForm input[type="text"] {
+  padding-right: 2rem; }
+
+#settings-panel .backup-restore-panel #restoreForm textarea {
+  height: 12rem;
+  font-family: "Source Code Pro", "Courier New", monospace;
+  font-size: 0.8rem; }
+
+#settings-panel .backup-restore-panel #restoreForm .form-group, #settings-panel .backup-restore-panel #restoreForm .setting-group {
+  margin-bottom: 0.4rem; }
+
+#settings-panel .backup-restore-panel #restoreForm .spinner-border {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.6rem; }
+
+#settings-panel .header-panel,
+#settings-panel .panel-container {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem; }
+
+#settings-panel .header-panel {
+  flex: none; }
+
+#settings-panel .panel-container {
+  overflow-y: auto; }
+
+#settings-panel .setting-group label {
+  margin-bottom: 0.25rem; }
+
+#settings-panel .setting-group p {
+  font-size: 0.95rem; }
+
+#settings-panel .setting-group #backupLink {
+  font-size: 0.9rem; }
+
+#settings-panel .setting-group .description, #settings-panel .setting-group .sync-panel .updates-available, #settings-panel .sync-panel .setting-group .updates-available {
+  color: #75959c; }
+  #settings-panel .setting-group .description a, #settings-panel .setting-group .sync-panel .updates-available a, #settings-panel .sync-panel .setting-group .updates-available a {
+    border-bottom-color: #75959c; }
+    #settings-panel .setting-group .description a:active, #settings-panel .setting-group .sync-panel .updates-available a:active, #settings-panel .sync-panel .setting-group .updates-available a:active, #settings-panel .setting-group .description a:focus, #settings-panel .setting-group .sync-panel .updates-available a:focus, #settings-panel .sync-panel .setting-group .updates-available a:focus, #settings-panel .setting-group .description a:hover, #settings-panel .setting-group .sync-panel .updates-available a:hover, #settings-panel .sync-panel .setting-group .updates-available a:hover {
+      border-bottom-color: inherit; }
+
+#settings-panel .setting-group .setting-value {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  padding: 0;
+  color: #083039;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  transition: none; }
+
+#settings-panel .sync-panel .id-url {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font-family: "Source Code Pro", "Courier New", monospace;
+  font-size: 0.92rem; }
+
+#settings-panel .sync-panel .progress {
+  height: 0.45rem;
+  border-radius: 1rem;
+  background-color: #083039;
+  overflow: visible;
+  margin: 0.25rem 0 1.5rem; }
+  #settings-panel .sync-panel .progress .progress-bar {
+    background-color: #35c6e8;
+    transition: none;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem; }
+
+#settings-panel .sync-panel .max,
+#settings-panel .sync-panel .used {
+  font-size: 0.8rem;
+  position: absolute;
+  margin-top: -1.5rem; }
+
+#settings-panel .sync-panel .max {
+  right: 0;
+  color: #083039; }
+
+#settings-panel .sync-panel .used {
+  color: #35c6e8;
+  left: 0; }
+
+#settings-panel .sync-panel .service-message {
+  max-height: 7rem; }
+
+#settings-panel .sync-panel .status-text {
+  color: #75959c; }
+
+#settings-panel .sync-panel .service-url {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem; }
+  #settings-panel .sync-panel .service-url > a {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+    white-space: nowrap; }
+  #settings-panel .sync-panel .service-url .service-status {
+    font-size: 0.9rem;
+    padding-left: 0.4rem;
+    margin-top: 0.1rem; }
+
+#settings-panel .sync-panel .updates-available {
+  font-size: 0.9rem;
+  text-align: center;
+  font-style: italic; }
+
+#settings-panel .view-content {
+  padding: 0.75rem 0 0; }
+
+#settings-panel .well, #settings-panel #login-panel .form-content .confirm, #login-panel .form-content #settings-panel .confirm,
+#settings-panel #login-panel .selected-service .confirm, #login-panel .selected-service #settings-panel .confirm {
+  padding: 0;
+  overflow: hidden; }
+  #settings-panel .well h4, #settings-panel #login-panel .form-content .confirm h4, #login-panel .form-content #settings-panel .confirm h4, #settings-panel #login-panel .selected-service .confirm h4, #login-panel .selected-service #settings-panel .confirm h4 {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0; }
+  #settings-panel .well .btn.btn-default, #settings-panel #login-panel .form-content .confirm .btn.btn-default, #login-panel .form-content #settings-panel .confirm .btn.btn-default, #settings-panel #login-panel .selected-service .confirm .btn.btn-default, #login-panel .selected-service #settings-panel .confirm .btn.btn-default {
+    font-size: 1.1rem;
+    line-height: 2.3rem; }
+  #settings-panel .well .panel-content, #settings-panel #login-panel .form-content .confirm .panel-content, #login-panel .form-content #settings-panel .confirm .panel-content, #settings-panel #login-panel .selected-service .confirm .panel-content, #login-panel .selected-service #settings-panel .confirm .panel-content {
+    padding: 0 1.25rem; }
+
+#information-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(8, 48, 57, 0.5);
+  overflow: hidden; }
+  #information-panel h4 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem; }
+  #information-panel p,
+  #information-panel ul {
+    font-size: 1.1rem;
+    line-height: 1.4rem; }
+  #information-panel ul {
+    margin-bottom: 0.75rem;
+    padding-left: 1rem; }
+  #information-panel .buttons {
+    margin-top: 1rem; }
+    #information-panel .buttons.small .btn {
+      font-size: 1rem;
+      line-height: 2.1rem;
+      padding: 0 0.5rem; }
+  #information-panel .view-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem; }
+
+#help-panel .pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem; }
+  #help-panel .pagination a {
+    position: relative; }
+    #help-panel .pagination a.next-link {
+      margin-right: 0.5rem; }
+      #help-panel .pagination a.next-link span:after {
+        content: "\203A";
+        position: absolute;
+        right: -0.5rem; }
+    #help-panel .pagination a.prev-link {
+      margin-left: 0.5rem; }
+      #help-panel .pagination a.prev-link span:before {
+        content: "\2039";
+        position: absolute;
+        left: -0.5rem; }
+
+#qr-panel {
+  flex-direction: column;
+  padding: 2rem; }
+  #qr-panel p {
+    text-align: center;
+    margin-bottom: 1rem; }
+  #qr-panel .buttons {
+    margin-top: 0; }
+    #qr-panel .buttons button {
+      display: block;
+      margin: 1rem auto 0; }
+  #qr-panel #qr {
+    height: 14rem;
+    width: 14rem;
+    margin-bottom: 1rem; }
+
+#support-panel h4 {
+  margin-bottom: 1rem; }
+
+#support-panel p,
+#support-panel ul {
+  font-size: 1rem;
+  line-height: 1.25rem; }
+
+#support-panel .buttons.small {
+  margin: 0.5rem 0 1rem; }
+
+#updated-panel .buttons button {
+  display: block;
+  margin: 0 auto 1rem; }
+
+#working-panel h3 {
+  color: #35c6e8;
+  font-size: 1.1rem;
+  margin: 0.2rem; }
+
+#working-panel .buttons {
+  position: absolute;
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center; }
+  #working-panel .buttons .button {
+    position: absolute; }
+
+#working-panel .spinner-border {
+  position: absolute;
+  width: 30vw;
+  height: 30vw; }
+
+#scan-panel h3 {
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem 0 0; }
+
+#scan-panel .buttons {
+  flex: 0 8rem; }
+  #scan-panel .buttons button {
+    margin-right: 1.75rem;
+    background-color: #edfeff;
+    color: #083039; }
+    #scan-panel .buttons button:last-child {
+      margin-right: 0; }
+    #scan-panel .buttons button.btn-delete-bookmark {
+      background-color: #ea3869; }
+    #scan-panel .buttons button.enabled {
+      color: #bdc71b; }
+
+#scan-panel .target {
+  background: url("../img/scan.svg") 50% 50% no-repeat;
+  flex: 1;
+  width: 14rem;
+  height: 14rem;
+  opacity: 0.5; }
+  #scan-panel .target.error {
+    background-image: url("../img/scan_error.svg"); }
+
+#scan-panel .validation {
+  position: absolute;
+  top: 50%;
+  margin-top: -2.5em;
+  font-size: 1rem;
+  padding: 0.25em 1em; }
+
+#scan-panel .view-content {
+  align-items: center; }
