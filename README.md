@@ -17,5 +17,7 @@ Duckduckgo＝Apach2.0により＝MITlicenseに変更
 ------------------------------------------------------------------
 Addon=同期機能の拡張機能
 
-メモリカスタマイザー＝そのまま
+メモリカスタマイザー＝https://drive.google.com/file/d/1pPmWfF_2VOO1nDDp-hc0geYkNYfw4k1T/view?usp=sharing
+
+
 
