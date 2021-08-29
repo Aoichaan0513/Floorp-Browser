@@ -12,6 +12,9 @@ FloorpLuncher.exe＝公開なし
 
 Duckduckgo＝Apach2.0により＝MITlicenseに変更
 
+Floorp Updater=GPL3.0
+
+
 以上
 
 ------------------------------------------------------------------
