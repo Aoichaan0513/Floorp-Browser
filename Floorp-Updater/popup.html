@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="https://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Chromium Updater</title><link rel="stylesheet" href="css/popup.css" type="text/css" /><style type="text/css">body {width:340px;}</style><script type="text/javascript" src="js/popup.js"></script></head>
+<body>
+    <div id="box1">
+      <a href="#" id="banner"><img src="images/banner.png" width="133" height="32"/></a>
+      <div class="spacer"></div>
+      <div class="wrap"><div class="label">現在のFloorpのバージョン: &nbsp;</div><div class="versionLabel"><div id="installedLabel"></div></div></div>
+      <div class="wrap"><div class="label">最新版のFloorpのバージョン: &nbsp;</div><img id="loadingFreesmug" src="images/dots.gif" alt="" /><div class="versionLabel"><div id="freesmugVersion"></div></div></div></div>
+      <div class="spacer"></div>
+      <div class="wrap" id="stable"><div class="stableLabel">Latest Chromium Stable: &nbsp;<br><div id="calendar">(see <a href="#">Release Calendar</a>)</div></div><img id="loadingStable" src="images/dots.gif" alt="" /><div class="versionLabel"><div id="stableVersion"></div></div></div>
+      <div class="spacer"></div>
+      <a id="options" href="#"><img src="images/cog.png"></a>
+      <div class="spacer"></div>
+      <div id="updateMsg"></div>
+      <div id="download"><br>
+        <form id="form" name="form" method="post" action="">
+          <div align="right">
+            <div class="spacer"></div>
+            <input type="submit" name="button1" id="websiteBtn" value="Floorp公式サイトへ"/>
+            <input type="submit" name="button2" id="downloadBtn" value="アップデートをダウンロード"/>
+          </div>
+        </form></div>
+      </div>
+    
+</body></html>

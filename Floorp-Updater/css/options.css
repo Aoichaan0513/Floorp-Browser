@@ -1,0 +1,508 @@
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 20;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+* {
+  outline: 0;
+}
+
+
+
+html {
+  line-height: 1;
+}
+
+
+
+ol, ul {
+  list-style: none;
+}
+
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+
+
+q, blockquote {
+  quotes: none;
+}
+
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+
+
+a img {
+  border: none;
+}
+
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  /*background: #6699cc;*/
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 62.5%;
+  color: #333333;
+}
+
+
+
+a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+
+
+small {
+  opacity: 0.66;
+  font-size: 0.66em;
+  line-height: 1.66em;
+  vertical-align: top;
+  display: inline-block;
+}
+
+
+
+#main {
+  width: 30em;
+    padding: 3em;
+  margin: 0.5em 0;
+  /*margin: 6em auto;*/
+}
+
+
+
+.header-title {
+  color: white;
+  font-size: 34px;
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+
+
+.center-align {
+  text-align: center;
+}
+
+
+
+section {
+  background: rgba(255, 255, 255, 0.9);
+/*  -webkit-box-shadow: 0px 1px 4px 0px rgba(85, 98, 112, 0.5);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(85, 98, 112, 0.5);
+  box-shadow: 0px 1px 4px 0px rgba(85, 98, 112, 0.5);*/
+
+}
+
+
+
+section.two.columns {
+  width: 20em;
+  display: inline-block;
+}
+
+
+section.two.columns.a {
+  float: left;
+}
+
+
+section.two.columns.b {
+  float: right;
+}
+
+
+
+h1, h2, h3 {
+  font-weight: 100;
+  line-height: 0.5em;
+  margin: 0 0 2 0;
+  padding: 0;
+}
+
+
+
+h1 {
+  color: #666666;
+  font-size: 40px;
+  text-align: center;
+  text-transform: absolute;
+}
+
+
+h1:only-child {
+  margin-bottom: 0;
+}
+
+
+
+h2 {
+  color: #666666;
+  font-size: 15px;
+}
+
+
+
+h3 {
+  font-size: 16px;
+  text-align: center;
+  margin: 1.5em 0;
+  padding: 1em 0;
+  border-bottom: 1px dashed rgba(85, 98, 112, 0.25);
+}
+
+
+
+h1 a {
+  color: #666666;
+}
+
+
+
+h1 + p,
+h2 + ul,
+h2 + ol,
+h2 + p,
+h3 {
+  /*border-top: 1px dashed rgba(85, 98, 112, 0.25);*/
+  padding-top: 1em;
+}
+
+
+
+p {
+  font-size: 16px;
+  line-height: 1.2em;
+  margin: 0 0 -0.75em 0;
+}
+
+
+section > p:first-child {
+  margin-top: -0.5em;
+}
+
+
+p + p {
+  margin-top: 1.5em;
+}
+
+
+
+h1 + p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 -0.75em 0;
+}
+
+
+h1 + p a {
+  color: #333333;
+}
+
+
+
+ul,
+ol {
+  font-size: 16px;
+  margin: 0;
+  padding-left: 1em;
+}
+
+
+
+.bullet-list {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+
+
+.option-item {
+  display: block;
+  clear: both;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 0 1em 0;
+  list-style: none;
+}
+
+
+.option-item:last-child {
+  margin-bottom: 0;
+}
+
+
+.option-item a, .option-item label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+.option-item input[type='checkbox'],
+.option-item input[type='radio'] {
+  margin-right: 16px;
+}
+
+
+.option-item input[type='checkbox']:checked + a, .option-item input[type='checkbox']:checked + label,
+.option-item input[type='radio']:checked + a,
+.option-item input[type='radio']:checked + label {
+  color: #74b714;
+}
+
+
+.option-item .more-options {
+  /* reset font size */
+  /* hide by default */
+  display: none;
+}
+
+
+.option-item .more-options p {
+  display: block;
+  text-align: center;
+  margin: 1.5em 0;
+  padding: 1em 0;
+  border-top: 1px dashed rgba(85, 98, 112, 0.25);
+  border-bottom: 1px dashed rgba(85, 98, 112, 0.25);
+}
+
+
+.option-item .more-options p input[type='radio'] {
+  margin-right: 8px;
+  margin-left: 16px;
+}
+
+
+.option-item .more-options p input[type='radio']:first-of-type {
+  margin-left: 0;
+}
+
+
+.option-item .more-options p input[type='radio'] + label {
+  cursor: pointer;
+}
+
+
+.option-item .more-options ol {
+  padding: 0 0 0 0;
+}
+
+
+.option-item .more-options legend {
+  display: none;
+  width: 100%;
+  text-align: center;
+  font-weight: 100;
+  font-size: 16px;
+  font-style: italic;
+}
+
+
+.option-item .more-options ol:empty ~ legend {
+  display: block;
+}
+
+
+.option-item .more-options li {
+  display: block;
+  text-align: center;
+}
+
+
+.option-item .more-options input[type='text'] {
+  display: inline-block;
+  width: 85%;
+}
+
+
+.option-item .more-options input[type='text'].error {
+  background: rgba(255, 0, 0, 0.25);
+}
+
+
+.option-item .more-options input[type='text'] + a {
+  display: inline-block;
+  line-height: 16px;
+  margin-left: 8px;
+}
+
+
+.option-item .more-options a.add {
+  display: inline-block;
+  overflow: hidden;
+  background: transparent url("../img/icon_sprite.png") no-repeat 0 -64px;
+  text-indent: -999999px;
+  width: 32px;
+  height: 32px;
+}
+
+
+.option-item .more-options a.add:hover {
+  background-position: -32px -64px;
+}
+
+
+.option-item .more-options a.remove {
+  display: inline-block;
+  overflow: hidden;
+  background: transparent url("../img/icon_sprite.png") no-repeat -4px -36px;
+  text-indent: -999999px;
+  width: 24px;
+  height: 24px;
+  -webkit-transform: rotate(0deg) scale(1);
+  -webkit-transition: -webkit-transform 400ms ease-out;
+}
+
+
+.option-item .more-options a.remove:hover {
+  background-position: -36px -36px;
+}
+
+
+.option-item .more-options .hidden a.remove {
+  -webkit-transform: rotate(360deg) scale(0);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+}
+
+
+.option-item a.filters {
+  padding-left: 0.5em;
+}
+
+
+
+a:hover,
+label:hover {
+  /*-webkit-transition: color 50ms ease-in-out;*/
+  color: #74b714;
+}
+
+
+
+
+em {
+  font-style: italic;
+}
+
+
+
+strong {
+  font-weight: 400;
+}
+
+#input_minutes {
+  width:30px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  outline: 0;
+  border:1px solid #999;
+}
+
+section ul li {
+  padding:5px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+
+label {
+  font-size:10pt;
+}
+
+#mismatch_disabled {
+  font-size:10pt;
+  opacity: 0.5;
+}
+
+#mismatch_disabled:hover {
+  color: rgb(51, 51, 51);
+}
+
+#footer {
+  font-size:11pt;
+}
+#footer a {
+  font-size:11pt;
+}
+
+.spacer {
+  width:100%;
+  min-height:40px;
+  display:block;
+}
+
+
+#credits {
+  text-align: right;
+  width: 45em;
+  /*background:#F9F9F9;*/
+  float: bottom;
+  float: right;
+  padding: 3px;
+  font-size:7pt;
+  color: #BBB;
+/*background: #dbdbdb;
+background: -moz-linear-gradient(-45deg,  #dbdbdb 0%, #f2f2f2 58%, #ffffff 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#dbdbdb), color-stop(58%,#f2f2f2), color-stop(100%,#ffffff));
+background: -webkit-linear-gradient(-45deg,  #dbdbdb 0%,#f2f2f2 58%,#ffffff 100%);
+background: -o-linear-gradient(-45deg,  #dbdbdb 0%,#f2f2f2 58%,#ffffff 100%);
+background: -ms-linear-gradient(-45deg,  #dbdbdb 0%,#f2f2f2 58%,#ffffff 100%);
+background: linear-gradient(135deg,  #dbdbdb 0%,#f2f2f2 58%,#ffffff 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#ffffff',GradientType=1 );
+*/
+}
+
+#credits a {
+ color: #777;
+ font-size: 7pt; 
+}
